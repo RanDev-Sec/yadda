@@ -1,0 +1,11 @@
+title: r12_login_then_exec [$proc]
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1078
+detection:
+  selection_1:
+    Image|re:
+    - \\(whoami|net1?)\.exe$
+  condition: selection_1

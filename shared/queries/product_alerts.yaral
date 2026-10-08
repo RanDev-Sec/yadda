@@ -1,0 +1,21 @@
+// Security-product detections, for "yadda run": events in which a security product (EDR, email security, identity
+// protection, cloud security ...) itself labelled what it saw with an ATT&CK technique
+// (UDM security_result.attack_details.techniques). Last 30 days. Shown separately from the SIEM's own rules:
+// it says a product detected the technique, not that a SecOps rule covers it.
+// Export the table as CSV -> environments\<name>\inputs\
+security_result.attack_details.techniques.id != ""
+$log_type = metadata.log_type
+$technique = security_result.attack_details.techniques.id
+$subtechnique = security_result.attack_details.techniques.subtechnique_id
+
+match:
+  $log_type, $technique, $subtechnique
+
+outcome:
+  $event_count = count(metadata.id)
+
+order:
+  $event_count desc
+
+limit:
+  10000

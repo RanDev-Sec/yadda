@@ -1,0 +1,27 @@
+title: r02_lsass_access [$p]
+logsource:
+  product: windows
+  category: process_access
+tags:
+- attack.t1003.001
+detection:
+  selection_1:
+    TargetImage|re:
+    - \\lsass\.exe$
+  selection_2:
+    GrantedAccess:
+    - '0x1010'
+  selection_3:
+    GrantedAccess:
+    - '0x1410'
+  filter_6:
+    SourceImage|re:
+    - \\Sysmon64\.exe$
+  filter_4:
+    CallTrace:
+    - '|UNKNOWN('
+  filter_5:
+    GrantedAccess:
+    - '0x103800'
+  condition: (selection_1 and (selection_2 or selection_3) and not ((filter_4 and
+    filter_5)) and not filter_6)

@@ -1,0 +1,10 @@
+title: r06_github_2fa_disabled [$g]
+tags:
+- attack.t1556
+logsource:
+  product: github
+  category: unknown
+detection:
+  selection:
+    _none: x
+  condition: selection

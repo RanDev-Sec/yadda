@@ -1,0 +1,14 @@
+rule r11_disabled {
+  meta:
+    author = "yadda test fixture"
+    description = "disabled in SecOps - must be ignored everywhere"
+    mitre_attack_technique = "T1110.003"
+    severity = "Medium"
+
+  events:
+    $e.metadata.event_type = "USER_LOGIN"
+    $e.security_result.action = "BLOCK"
+
+  condition:
+    $e
+}

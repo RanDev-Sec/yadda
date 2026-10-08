@@ -1,0 +1,8 @@
+stage,techniques,% of in scope,meaning
+ATT&CK techniques (all platforms),697,,"the Enterprise matrix, sub-techniques included"
+In scope for this environment,502,100.0%,on the environment's platforms; every % below is of this number
+Telemetry ceiling,207,41.2%,"every input of a MITRE detection route is in the SIEM, or a rule exists; 273 more have some inputs, 192 of them one input short"
+With an enabled rule,11,2.2%,at least one enabled SIEM rule tagged with the technique
+Working detection,5,1.0%,"a rule fired recently and isn't noisy, or a test proved it (score 3+). A firing rule detects something; it doesn't show that every variant is caught"
+Depth-weighted working,2.9,0.6%,"working techniques weighted by how much of them the rules cover (Atomic tests once 3+ variants are tested, else MITRE implementations, else data paths)"
+Validated,0,0.0%,proven by a test (score 4-5); 1 more has an Atomic variant that fired but no score 4 yet (record it with yadda score)

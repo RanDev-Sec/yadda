@@ -1,0 +1,19 @@
+rule r01_win_schtasks_create {
+  meta:
+    author = "yadda test fixture"
+    description = "schtasks.exe creating a task (fictional test rule)"
+    mitre_attack_technique = "T1053.005"
+    severity = "Medium"
+
+  events:
+    $e.metadata.event_type = "PROCESS_LAUNCH"
+    re.regex($e.target.process.file.full_path, `\\schtasks\.exe$`) nocase
+    $e.target.process.command_line = /\/create/ nocase
+    $e.principal.hostname = $host
+
+  match:
+    $host over 5m
+
+  condition:
+    $e
+}

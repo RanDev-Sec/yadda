@@ -1,0 +1,11 @@
+title: r03_portproxy [$x]
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1090
+detection:
+  selection_1:
+    CommandLine|re:
+    - netsh.*portproxy.*add
+  condition: selection_1

@@ -1,0 +1,20 @@
+// Which log types each rule triggered on (Detections data source, 365-day retention).
+// Uses the documented evidence field detection.collection_elements.references.event.metadata.log_type.
+// "yadda run" executes it over 90 days; or export the table as CSV -> environments\<name>\inputs\
+detection.type = "RULE_DETECTION"
+$rule_name = detection.detection.rule_name
+$rule_name != ""
+$log_type = detection.collection_elements.references.event.metadata.log_type
+$log_type != ""
+
+match:
+  $rule_name, $log_type
+
+outcome:
+  $detection_count = count_distinct(detection.id)
+
+order:
+  $detection_count desc
+
+limit:
+  10000

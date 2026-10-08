@@ -1,0 +1,19 @@
+rule r05_okta_push_spam {
+  meta:
+    author = "yadda test fixture"
+    description = "many rejected Okta push notifications (cloud rule)"
+    mitre_attack_technique = "T1621"
+    severity = "High"
+
+  events:
+    $l.metadata.event_type = "USER_LOGIN"
+    $l.metadata.log_type = "OKTA"
+    $l.security_result.action = "BLOCK"
+    $l.target.user.userid = $user
+
+  match:
+    $user over 10m
+
+  condition:
+    #l > 5
+}

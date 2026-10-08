@@ -1,0 +1,5 @@
+exit=0
+acmetest: 14 data components from 5 log types
+  log type / event type pairs with no mapping (add rows to shared/udm_event_type_to_data_component.csv; the log_type and product_event_type columns can narrow a row to one product or event ID):
+   - UNUSED_APP GENERIC_EVENT (5,000 events)
+   - OKTA USER_CHANGE_PERMISSION (40 events)

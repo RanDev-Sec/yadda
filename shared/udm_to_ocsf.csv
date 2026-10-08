@@ -1,0 +1,87 @@
+udm_event_type,udm_field,ocsf_fields,sigma_field,note
+PROCESS_LAUNCH,target.process.file.full_path,process.file.path;process.path,,new process image (Sysmon 1 Image / 4688 NewProcessName)
+PROCESS_LAUNCH,target.process.command_line,process.command_line,,
+PROCESS_LAUNCH,target.process.pid,process.pid,,
+PROCESS_LAUNCH,target.process.product_specific_process_id,process.uid,,Sysmon ProcessGuid
+PROCESS_LAUNCH,target.process.file.sha256,process.file.hashes,,
+PROCESS_LAUNCH,target.process.file.sha1,process.file.hashes,,
+PROCESS_LAUNCH,target.process.file.md5,process.file.hashes,,
+PROCESS_LAUNCH,target.process.file.pe_file.original_file_name,process.file.name,,Sysmon OriginalFileName
+PROCESS_LAUNCH,target.process.file.pe_file.company,process.file.company,,
+PROCESS_LAUNCH,target.process.file.pe_file.description,process.file.description,,
+PROCESS_LAUNCH,target.process.file.pe_file.product,process.file.product,,
+PROCESS_LAUNCH,target.process.file.pe_file.file_version,process.file.version,,
+PROCESS_LAUNCH,target.process.integrity_level_rid,process.integrity,,
+PROCESS_LAUNCH,principal.process.file.full_path,process.parent_process.file.path;process.parent.path,,parent image (Sysmon ParentImage / 4688 ParentProcessName)
+PROCESS_LAUNCH,principal.process.command_line,process.parent_process.command_line,,
+PROCESS_LAUNCH,principal.process.pid,process.parent_process.pid;process.parent.pid,,
+PROCESS_LAUNCH,principal.process.product_specific_process_id,process.parent_process.uid,,
+PROCESS_LAUNCH,principal.user.userid,user.name;actor.user.name,,
+PROCESS_LAUNCH,target.user.userid,user.name;process.user.name,,
+PROCESS_LAUNCH,principal.user.user_display_name,user.name;actor.user.name,,
+PROCESS_LAUNCH,target.process.file.names,process.file.name,,
+PROCESS_OPEN,principal.process.file.full_path,process.file.path,,Sysmon 10 SourceImage
+PROCESS_OPEN,target.process.file.full_path,target_process.file.path,,Sysmon 10 TargetImage
+PROCESS_OPEN,principal.process.pid,process.pid,,
+PROCESS_OPEN,target.process.pid,target_process.pid,,
+PROCESS_INJECTION,principal.process.file.full_path,process.file.path,,Sysmon 8 SourceImage
+PROCESS_INJECTION,target.process.file.full_path,target_process.file.path,,Sysmon 8 TargetImage
+PROCESS_MODULE_LOAD,principal.process.file.full_path,process.file.path,,Sysmon 7 Image
+PROCESS_MODULE_LOAD,target.process.file.full_path,module.file.path;file.path,,Sysmon 7 ImageLoaded
+PROCESS_MODULE_LOAD,target.file.full_path,module.file.path;file.path,,Sysmon 7 ImageLoaded (some parsers)
+PROCESS_MODULE_LOAD,target.file.sha256,file.hashes,,
+PROCESS_MODULE_LOAD,target.file.signature_info.sigcheck.signer,file.signature,,
+PROCESS_MODULE_LOAD,target.file.signature_info.sigcheck.verified,file.signature_status;file.is_signed,,
+PROCESS_MODULE_LOAD,target.file.pe_file.original_file_name,file.name,,
+NETWORK_CONNECTION,principal.process.file.full_path,process.file.path;actor.process.path,,process making the connection
+NETWORK_CONNECTION,principal.ip,src_endpoint.ip,,
+NETWORK_CONNECTION,principal.port,src_endpoint.port,,
+NETWORK_CONNECTION,principal.hostname,src_endpoint.hostname,,
+NETWORK_CONNECTION,target.ip,dst_endpoint.ip,,
+NETWORK_CONNECTION,target.port,dst_endpoint.port,,
+NETWORK_CONNECTION,target.hostname,dst_endpoint.hostname,,
+NETWORK_CONNECTION,network.ip_protocol,network.protocol;connection_info.protocol_num,,
+NETWORK_CONNECTION,network.direction,network.direction (derived);connection_info.direction,,
+NETWORK_DNS,network.dns.questions.name,dns.question.name,,Sysmon 22 QueryName
+NETWORK_DNS,network.dns.answers.data,dns.answers.data,,
+NETWORK_DNS,principal.process.file.full_path,process.file.path,,
+FILE_CREATION,target.file.full_path,file.path,,
+FILE_CREATION,principal.process.file.full_path,process.file.path,,
+FILE_MODIFICATION,target.file.full_path,file.path,,
+FILE_MODIFICATION,principal.process.file.full_path,process.file.path,,
+FILE_DELETION,target.file.full_path,file.path,,
+FILE_DELETION,principal.process.file.full_path,process.file.path,,
+FILE_OPEN,target.file.full_path,file.path,,
+FILE_READ,target.file.full_path,file.path,,
+REGISTRY_CREATION,target.registry.registry_key,registry.key;reg_value.path,,Sysmon 12 TargetObject / 4657 ObjectName
+REGISTRY_CREATION,principal.process.file.full_path,process.file.path,,
+REGISTRY_MODIFICATION,target.registry.registry_key,registry.key;reg_value.path,,Sysmon 13 TargetObject / 4657 ObjectName
+REGISTRY_MODIFICATION,target.registry.registry_value_name,reg_value.name,,
+REGISTRY_MODIFICATION,target.registry.registry_value_data,registry.value;reg_value.data,,Sysmon 13 Details / 4657 NewValue
+REGISTRY_MODIFICATION,principal.process.file.full_path,process.file.path,,
+REGISTRY_DELETION,target.registry.registry_key,registry.key;reg_value.path,,
+REGISTRY_DELETION,principal.process.file.full_path,process.file.path,,
+*,principal.user.userid,user.name;actor.user.name,,
+*,target.user.userid,user.name;process.user.name,,
+*,principal.process.file.full_path,process.file.path,,acting process (all event types not listed above)
+*,principal.process.command_line,process.command_line,,
+*,target.file.full_path,file.path,,
+*,target.ip,dst_endpoint.ip,,
+*,target.port,dst_endpoint.port,,
+*,principal.ip,src_endpoint.ip,,
+*,target.registry.registry_key,registry.key;reg_value.path,,
+*,target.registry.registry_value_data,registry.value;reg_value.data,,
+*,principal.administrative_domain,actor.user.domain;user.domain,,
+*,target.administrative_domain,user.domain;process.user.domain,,
+*,target.process.command_line,process.command_line,,
+*,target.process.file.full_path,process.path;target_process.file.path,,target process for event types without their own row
+PROCESS_OPEN,target.resource.name,process.access_mask,,Sysmon 10 GrantedAccess as the SecOps Sysmon parser stores it
+*,additional.fields.GrantedAccess,process.access_mask,,
+*,additional.fields.CallTrace,process.call_trace,,Sysmon 10 CallTrace
+*,additional.fields.OriginalFileName,process.file.name;file.name,,
+*,additional.fields.IntegrityLevel,process.integrity,,
+SCHEDULED_TASK_CREATION,target.resource.name,job.name,,4698 TaskName
+*,target.process.file.full_path,unmapped.object.name;unmapped.object_name,,4656/4663 ObjectName when the object is a process
+*,target.file.full_path,unmapped.object.name;unmapped.object_name,,4656/4663 ObjectName
+PROCESS_LAUNCH,src.process.file.full_path,process.file.name,,PE original file name - SecOps' Sigma-converted rules compare it to names like createdump.exe (Sysmon OriginalFileName)
+USER_RESOURCE_ACCESS,security_result.detection_fields.value,,Properties,4662 Properties (no OCSF name in the calculator - resolved by Sigma name; only used when the event has that field)

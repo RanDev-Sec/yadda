@@ -1,0 +1,12 @@
+technique,score,rules
+T1003.001,2,SecOps: r02_lsass_access
+T1053.005,3,SecOps: r01_win_schtasks_create
+T1059.001,3,SecOps: r07_comment_and_negation
+T1078,3,SecOps: r12_login_then_exec
+T1090,1,SecOps: r03_portproxy
+T1530,2,SecOps: r13_o365_download
+T1543.003,3,SecOps: r04_service_list
+T1556,1,SecOps: r06_github_2fa_disabled
+T1566.001,1,SecOps: r10_never_fired
+T1621,1,SecOps: r05_okta_push_spam
+T1685,3,SecOps: r09_revoked_tag

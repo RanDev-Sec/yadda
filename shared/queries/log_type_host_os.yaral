@@ -1,0 +1,18 @@
+// Host operating systems per log type, for "yadda run": which OSes each log type's events come from
+// (UDM principal.platform: WINDOWS, LINUX, MAC ...). Lets an EDR count only for the OSes it reports on.
+// Last 7 days. Export the table as CSV -> environments\<name>\inputs\
+metadata.log_type != ""
+$log_type = metadata.log_type
+$os = principal.platform
+
+match:
+  $log_type, $os
+
+outcome:
+  $event_count = count(metadata.id)
+
+order:
+  $event_count desc
+
+limit:
+  10000

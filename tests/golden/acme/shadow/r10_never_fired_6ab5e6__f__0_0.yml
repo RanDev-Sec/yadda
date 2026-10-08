@@ -1,0 +1,11 @@
+title: r10_never_fired [$f]
+logsource:
+  product: windows
+  category: file_event
+tags:
+- attack.t1566.001
+detection:
+  selection_1:
+    TargetFilename|re:
+    - \\Content\.Outlook\\.*\.(js|hta|vbs)$
+  condition: selection_1

@@ -1,0 +1,29 @@
+exit=0
+acmetest: 12 enabled rules
+
+MOST USEFUL  (working first, then: only rule for a technique, confirmed true positives, data paths no other rule reads, attacker prevalence)
+  rule                                                 state        sole   TP uniq paths  prev robust  techniques
+  r01_win_schtasks_create                              firing          1    9          1    66      1  T1053.005
+  r07_comment_and_negation                             firing          1    0          2   102      2  T1059.001
+  r12_login_then_exec                                  firing          1    0          1    58      1  T1078
+  r04_service_list                                     firing          1    0          1    31      -  T1543.003
+  r09_revoked_tag                                      firing          1    0          0    41      -  T1685
+  r02_lsass_access                                     firing          1    2          1    53      1  T1003.001
+  r13_o365_download                                    firing          1    1          0     8      -  T1530
+  r10_never_fired                                      never fired     1    0          1    88      3  T1566.001
+  r03_portproxy                                        stale           1    0          1    29      3  T1090
+  r05_okta_push_spam                                   fired, date unknown    1    0          1     4      -  T1621
+  r06_github_2fa_disabled                              not in export    1    0          0     2      -  T1556
+
+EASY TO EVADE  (2 working rules score robustness 1 in MITRE's calculator: they key on values an attacker controls - file names, paths, IPs, hashes)
+  r01_win_schtasks_create
+  r12_login_then_exec
+
+NEEDS TUNING  (2 rules)
+  r02_lsass_access                                     noisy: 95% of 40 closed cases not malicious
+  r13_o365_download                                    noisy: 83% of 6 closed cases not malicious
+
+NEVER FIRED  (1 rules - rare by design, or broken; see yadda review)
+  r10_never_fired
+
+full table: <ROOT>/output/acmetest/<DATE>/data/rule_ranking.csv

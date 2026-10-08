@@ -1,0 +1,23 @@
+// Closed-case outcomes per rule, for the evidence step of "yadda run". Cases data source (365 days).
+// One row per (rule, closure reason) with distinct cases, so a case with many alerts counts once.
+// Only useful if analysts set a closure reason on every case.
+// case.alerts.metadata.detection.rule_name appears in the dashboard documentation's notes but not in its
+// field list. If SecOps rejects it, the evidence step still works without this export.
+// Export the table as CSV -> environments\<name>\inputs\
+// (yadda also reads an export with case_count / malicious / not_malicious columns.)
+case.closure_details.reason != "SOAR_CASE_CLOSE_REASON_UNSPECIFIED"
+$rule_name = case.alerts.metadata.detection.rule_name
+$rule_name != ""
+$reason = case.closure_details.reason
+
+match:
+  $rule_name, $reason
+
+outcome:
+  $case_count = count_distinct(case.name)
+
+order:
+  $case_count desc
+
+limit:
+  10000

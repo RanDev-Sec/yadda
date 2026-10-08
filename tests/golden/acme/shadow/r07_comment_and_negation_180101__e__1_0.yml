@@ -1,0 +1,10 @@
+title: r07_comment_and_negation [$e]
+logsource:
+  product: windows
+  category: process_access
+tags:
+- attack.t1059.001
+detection:
+  selection_none:
+    _no_scorable_field: x
+  condition: selection_none

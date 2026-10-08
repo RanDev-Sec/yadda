@@ -1,0 +1,133 @@
+﻿status,source,event_id,data_component,basis,summary
+MITRE name not in ATT&CK 19.2,winlog,4656,Service Access,explicit rows only,A handle to an object was requested.
+MITRE name not in ATT&CK 19.2,winlog,4672,Logon Session Modification,explicit rows only,Special privileges assigned to a new logon.
+MITRE name not in ATT&CK 19.2,winlog,4699,Scheduled Job Deletion,explicit rows only,A scheduled task was deleted
+MITRE name not in ATT&CK 19.2,winlog,4727,Group Creation,explicit rows only,A security-enabled global group was created.
+MITRE name not in ATT&CK 19.2,winlog,4730,Group Deletion,explicit rows only,A security-enabled global group was deleted.
+MITRE name not in ATT&CK 19.2,winlog,4731,Group Creation,explicit rows only,A security-enabled local group was created.
+MITRE name not in ATT&CK 19.2,winlog,4734,Group Deletion,explicit rows only,A security-enabled local group was deleted.
+MITRE name not in ATT&CK 19.2,winlog,4754,Group Creation,explicit rows only,A security-enabled universal group was created.
+MITRE name not in ATT&CK 19.2,winlog,4758,Group Deletion,explicit rows only,A security-enabled universal group was deleted.
+MITRE name not in ATT&CK 19.2,winlog,4779,Logon Session Terminated,explicit rows only,A session was disconnected from a Windows station
+MITRE name not in ATT&CK 19.2,winlog,5142,Network Share Creation,explicit rows only,A network share object was added.
+MITRE name not in ATT&CK 19.2,winlog,5143,Network Share Modification,explicit rows only,A network share object was modified.
+MITRE name not in ATT&CK 19.2,winlog,5144,Network Share Deletion,explicit rows only,A network share object was deleted.
+agree,sysmon,1,Process Creation,inventory event type PROCESS_LAUNCH,Process Creation
+agree,sysmon,2,File Modification,explicit rows only,File Modification
+agree,sysmon,3,Network Connection Creation,inventory event type NETWORK_CONNECTION,Network Connection Creation
+agree,sysmon,4,Service Metadata,explicit rows only,Service Metadata
+agree,sysmon,5,Process Termination,explicit rows only,Process Termination
+agree,sysmon,6,Driver Load,inventory event type STATUS_UPDATE,Driver Load
+agree,sysmon,7,Module Load,explicit rows only,Module Load
+agree,sysmon,8,Process Modification,explicit rows only,Process Modification
+agree,sysmon,9,File Access,explicit rows only,File Access
+agree,sysmon,10,Process Access,inventory event type PROCESS_OPEN,Process Access
+agree,sysmon,11,File Creation,inventory event type FILE_CREATION,File Creation
+agree,sysmon,12,Windows Registry Key Creation,explicit rows only,Windows Registry Key Deletion
+agree,sysmon,13,Windows Registry Key Modification,inventory event type REGISTRY_MODIFICATION,Windows Registry Key Modification
+agree,sysmon,14,Windows Registry Key Modification,explicit rows only,Windows Registry Key Modification
+agree,sysmon,15,File Creation,explicit rows only,File Creation
+agree,sysmon,16,Application Log Content,explicit rows only,Application Log Content
+agree,sysmon,17,Named Pipe Metadata,inventory event type GENERIC_EVENT,Named Pipe Creation
+agree,sysmon,18,Named Pipe Metadata,explicit rows only,Named Pipe Connection
+agree,sysmon,23,File Deletion,explicit rows only,File Deletion
+agree,sysmon,25,Process Modification,explicit rows only,Process Modification
+agree,sysmon,26,File Deletion,explicit rows only,File Deletion Logged
+agree,sysmon,27,File Modification,explicit rows only,File Block Executable
+agree,sysmon,28,File Metadata,explicit rows only,File Block Shredding
+agree,sysmon,29,File Modification,explicit rows only,File Executable Deleted
+agree,sysmon,255,Application Log Content,explicit rows only,Application Log Content
+agree,winlog,4103,Script Execution,explicit rows only,A PowerShell pipeline execution detail was recorded.
+agree,winlog,4104,Script Execution,inventory event type GENERIC_EVENT,A PowerShell script block was executed.
+agree,winlog,4610,Logon Session Metadata,explicit rows only,An authentication package has been loaded by the Local Security Authority.
+agree,winlog,4611,Logon Session Metadata,explicit rows only,A trusted logon process has been registered with the Local Security Authority.
+agree,winlog,4614,Logon Session Metadata,explicit rows only,A notification package has been loaded by the Security Account Manager.
+agree,winlog,4616,Host Status,explicit rows only,The system time was changed.
+agree,winlog,4622,Logon Session Metadata,explicit rows only,A security package has been loaded by the Local Security Authority.
+agree,winlog,4624,Logon Session Creation,inventory event type USER_LOGIN,An account was successfully logged on.
+agree,winlog,4625,User Account Authentication,explicit rows only,An account failed to log on.
+agree,winlog,4634,Logon Session Metadata,explicit rows only,An account was logged off.
+agree,winlog,4647,Logon Session Metadata,explicit rows only,User initiated logoff.
+agree,winlog,4648,User Account Authentication,explicit rows only,A logon was attempted using explicit credentials.
+agree,winlog,4657,Windows Registry Key Modification,explicit rows only,A registry value was modified.
+agree,winlog,4660,Windows Registry Key Deletion,explicit rows only,An object was deleted.
+agree,winlog,4661,File Access,explicit rows only,A handle to an object was requested.
+agree,winlog,4662,Active Directory Object Access,inventory event type USER_UNCATEGORIZED,An operation was performed on an object.
+agree,winlog,4663,Windows Registry Key Access,explicit rows only,An attempt was made to access an object.
+agree,winlog,4664,File Metadata,explicit rows only,An attempt was made to create a hard link.
+agree,winlog,4670,Windows Registry Key Modification,explicit rows only,A permissions on an object were changed.
+agree,winlog,4673,Logon Session Metadata,explicit rows only,A privileged service was called
+agree,winlog,4674,User Account Metadata,explicit rows only,An operation was attempted on a privileged object
+agree,winlog,4688,Process Creation,inventory event type PROCESS_LAUNCH,A new process has been created
+agree,winlog,4689,Process Termination,explicit rows only,A process has exited.
+agree,winlog,4690,File Access,explicit rows only,An attempt was made to duplicate a handle to an object.
+agree,winlog,4696,Process Creation,explicit rows only,A primary token was assigned to process. The assigning process fields identifies the process that started the child (new) process
+agree,winlog,4697,Service Creation,explicit rows only,A service was installed in the system.
+agree,winlog,4698,Scheduled Job Creation,explicit rows only,A scheduled task was created.
+agree,winlog,4700,Scheduled Job Modification,explicit rows only,A scheduled task was disabled
+agree,winlog,4701,Scheduled Job Modification,explicit rows only,A scheduled task was disabled
+agree,winlog,4702,Scheduled Job Modification,explicit rows only,A scheduled task was updated
+agree,winlog,4703,User Account Modification,explicit rows only,A user right was adjusted.
+agree,winlog,4717,User Account Modification,explicit rows only,System security access was granted to an account.
+agree,winlog,4718,User Account Modification,explicit rows only,System security access was removed from an account.
+agree,winlog,4719,Active Directory Object Modification,explicit rows only,System audit policy was changed.
+agree,winlog,4720,User Account Creation,explicit rows only,A user account was created.
+agree,winlog,4722,User Account Modification,explicit rows only,A user account was enabled.
+agree,winlog,4723,User Account Modification,explicit rows only,An attempt was made to chane an accounts password
+agree,winlog,4724,User Account Modification,explicit rows only,An attempt was made to reset an accounts password
+agree,winlog,4725,User Account Modification,explicit rows only,A user account was disabled.
+agree,winlog,4726,User Account Deletion,explicit rows only,A user account was deleted.
+agree,winlog,4729,Group Modification,explicit rows only,A member was removed from a security-enabled global group.
+agree,winlog,4732,Group Modification,explicit rows only,A member was added to a security-enabled local group.
+agree,winlog,4733,Group Modification,explicit rows only,A member was removed from a security-enabled local group.
+agree,winlog,4735,Group Modification,explicit rows only,A security-enabled local group was changed.
+agree,winlog,4737,Active Directory Object Modification,explicit rows only,A security-enabled global group was changed.
+agree,winlog,4738,User Account Modification,explicit rows only,A user account was changed.
+agree,winlog,4740,User Account Modification,explicit rows only,A user account was locked out.
+agree,winlog,4741,User Account Creation,explicit rows only,A computer account was created.
+agree,winlog,4742,User Account Modification,explicit rows only,A computer account was changed.
+agree,winlog,4743,User Account Deletion,explicit rows only,A computer account was deleted.
+agree,winlog,4755,Group Modification,explicit rows only,A security-enabled universal group was changed.
+agree,winlog,4756,Group Modification,explicit rows only,A member was added to a security-enabled universal group.
+agree,winlog,4757,Group Modification,explicit rows only,A member was removed from a security-enabled universal group.
+agree,winlog,4764,Group Modification,explicit rows only,A groups type was changed.
+agree,winlog,4767,User Account Modification,explicit rows only,A user account was unlocked.
+agree,winlog,4768,Active Directory Credential Request,explicit rows only,A Kerberos authentication ticket (TGT) was requested.
+agree,winlog,4769,Active Directory Credential Request,inventory event type USER_LOGIN,A Kerberos service ticket was requested.
+agree,winlog,4770,Active Directory Object Modification,explicit rows only,A Kerberos service ticket was renewed
+agree,winlog,4771,Active Directory Credential Request,explicit rows only,Kerberos pre-authentication failed
+agree,winlog,4776,User Account Authentication,explicit rows only,The computer attempted to validate the credentials for an account
+agree,winlog,4778,Logon Session Creation,explicit rows only,A session was reconnected to a Window Station.
+agree,winlog,4781,User Account Modification,explicit rows only,The name of an account was changed.
+agree,winlog,4798,Group Enumeration,explicit rows only,A user's local group membership was enumerated
+agree,winlog,4799,Group Enumeration,explicit rows only,A security-enabled local group membership was enumerated
+agree,winlog,4932,Active Directory Object Access,explicit rows only,Synchronization of a replica of an Active Directory naming context has begun.
+agree,winlog,4946,Firewall Rule Modification,explicit rows only,A change has been made to Windows Firewall exception list. A rule was added.
+agree,winlog,4947,Firewall Rule Modification,explicit rows only,A change has been made to Windows Firewall exception list. A rule was modified.
+agree,winlog,4948,Firewall Rule Modification,explicit rows only,A change has been made to Windows Firewall exception list. A rule was deleted.
+agree,winlog,4950,Firewall Metadata,explicit rows only,A windows firewall setting has changed
+agree,winlog,4964,Logon Session Creation,explicit rows only,Special groups have been assigned to a new logon.
+agree,winlog,5031,Network Connection Creation,explicit rows only,The Windows Firewall Service blocked an application from accepting incoming connections on the network.
+agree,winlog,5136,Active Directory Object Modification,inventory event type USER_UNCATEGORIZED,A directory service object was modified.
+agree,winlog,5137,Active Directory Object Creation,explicit rows only,A directory service object was created.
+agree,winlog,5138,Active Directory Object Creation,explicit rows only,A directory service object was undeleted
+agree,winlog,5139,Active Directory Object Modification,explicit rows only,A directory service object was moved.
+agree,winlog,5140,Network Share Access,explicit rows only,A network share object was accessed.
+agree,winlog,5141,Active Directory Object Deletion,explicit rows only,A directory service object was deleted.
+agree,winlog,5145,Network Share Access,inventory event type STATUS_UPDATE,A network share object was checked to see whether client can be granted desired access.
+agree,winlog,5154,Network Connection Creation,explicit rows only,The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.
+agree,winlog,5155,Network Connection Creation,explicit rows only,The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections.
+agree,winlog,5156,Network Connection Creation,explicit rows only,The Windows Filtering Platform has permitted a connection.
+agree,winlog,5157,Network Connection Creation,explicit rows only,The Windows Filtering Platform has blocked a connection.
+agree,winlog,5158,Network Connection Creation,explicit rows only,The Windows Filtering Platform has permitted a bind to a local port.
+agree,winlog,5159,Network Connection Creation,explicit rows only,The Windows Filtering Platform has blocked a bind to a local port.
+ours only - review,sysmon,2,File Metadata,explicit row,MITRE maps this event to: File Modification
+ours only - review,sysmon,9,Drive Access,explicit row,MITRE maps this event to: File Access
+ours only - review,sysmon,15,File Metadata,explicit row,MITRE maps this event to: File Creation
+ours only - review,winlog,4103,Command Execution,explicit row,MITRE maps this event to: Script Execution
+ours only - review,winlog,4656,Windows Registry Key Access,explicit row,MITRE maps this event to: Service Access
+ours only - review,winlog,4663,File Access,explicit row,MITRE maps this event to: Windows Registry Key Access
+ours only - review,winlog,4699,Scheduled Job Modification,explicit row,MITRE maps this event to: Scheduled Job Deletion
+ours only - review,winlog,4798,User Account Metadata,explicit row,MITRE maps this event to: Group Enumeration
+ours only - review,winlog,4950,Firewall Disable,explicit row,MITRE maps this event to: Firewall Metadata
+skipped - external (not customer telemetry),sysmon,22,Active DNS,inventory event type NETWORK_DNS,DNS Query

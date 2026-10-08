@@ -1,0 +1,49 @@
+exit=0
+acmetest: 2 threats (THREATS= in environment.env) use 115 ATT&CK techniques
+  99 on the environment's platforms and detectable in its telemetry; 3 on other platforms (not listed); 13 pre-compromise (recon / resource development, not SIEM-detectable)
+
+COVERAGE AGAINST THESE THREATS
+  Techniques detected or validated      4/99  4.0%
+  Weighted by groups using each            6.1%   (share of all group-technique uses you would detect)
+  Data present, no rule                43        quickest wins
+  No data seen (inputs missing)         2
+  Platform not seen in the SIEM         0
+  P1 - used by all 2                   15 techniques, detected 3 (20.0%), data/no rule 7, some data 4, no data seen 0, platform not seen 0
+  P3 - used by one group               84 techniques, detected 1 (1.2%), data/no rule 36, some data 43, no data seen 2, platform not seen 0
+
+MISSING DATA  (ranked by how much threat activity it makes visible; full list in the CSV)
+  ATT&CK data type                 techniques   P1 weight  provided by (event type / log type)
+  Module Load (Windows)                            20    1     21  WinEventLog:Sysmon, WINDOWS_SYSMON event 7, PROCESS_MODULE_LOAD
+  Logon Session Metadata (Windows)                  7    1      8  WinEventLog:Security, WINEVTLOG event 4610/4611/4614/4622/4634/4647/4673
+  Application Log Content (Windows)                 6    1      7  ApplicationLog:IIS, ApplicationLog:Intune/MDM Logs, WinEventLog:Applicat
+  File Metadata (Windows)                           6    1      7  EDR:detection, WinEventLog:Microsoft-Windows-CodeIntegrity/Operational, 
+  File Access (Windows)                             6    0      6  WinEventLog:Microsoft-Windows-Windows Defender/Operational, WinEventLog:
+  Application Log Content (SaaS)                    4    0      4  saas:googleworkspace, saas:okta, saas:slack ...
+  Active Directory Credential Request (Win          3    0      3  WinEventLog:Security, WINEVTLOG event 4768/4769/4771
+  File Modification (Windows)                       3    0      3  WinEventLog:Security, WinEventLog:Sysmon, WINDOWS_SYSMON event 2/27/29 .
+  Logon Session Creation (Office Suite)             3    0      3  azure:signinlogs, m365:unified, USER_LOGIN
+  Scheduled Job Creation (Windows)                  3    0      3  WinEventLog:Security, WinEventLog:TaskScheduler, WINEVTLOG event 4698 ..
+  Script Execution (Windows)                        3    0      3  EDR:scriptblock, etw:Microsoft-Antimalware-Scan-Interface, m365:defender
+  User Account Authentication (SaaS)                3    0      3  GCPAuditLogs:login.googleapis.com, gcp:audit, saas:googleworkspace ...
+
+PRIORITY LIST (top 15 of 99)
+    # tier technique  name                               groups ATT&CK  status         action
+    1 P1   T1105      Ingress Tool Transfer                2/2     117  Data, no rule  write a rule - the data is already there
+    2 P1   T1059.001  PowerShell                           2/2     102  Detected       covered - prove it with Atomic Red Team (Validation sheet)
+    3 P1   T1204.002  Malicious File                       2/2      98  Some data      write a rule; more data would help: File Metadata
+    4 P1   T1566.001  Spearphishing Attachment             2/2      88  Unverified     rule deployed - confirm it fires (yadda review)
+    5 P1   T1036.005  Match Legitimate Resource Name or    2/2      78  Data, no rule  write a rule - the data is already there
+    6 P1   T1190      Exploit Public-Facing Application    2/2      67  Some data      write a rule; more data would help: Application Log Content, Module Lo
+    7 P1   T1053.005  Scheduled Task                       2/2      66  Detected       covered - prove it with Atomic Red Team (Validation sheet)
+    8 P1   T1005      Data from Local System               2/2      61  Data, no rule  write a rule - the data is already there
+    9 P1   T1547.001  Registry Run Keys / Startup Folder   2/2      60  Data, no rule  write a rule - the data is already there
+   10 P1   T1078      Valid Accounts                       2/2      58  Detected       covered - prove it with Atomic Red Team (Validation sheet)
+   11 P1   T1204.001  Malicious Link                       2/2      58  Data, no rule  write a rule - the data is already there
+   12 P1   T1566.002  Spearphishing Link                   2/2      55  Data, no rule  write a rule - the data is already there
+   13 P1   T1047      Windows Management Instrumentation   2/2      54  Some data      write a rule; more data would help: WMI Creation
+   14 P1   T1218.005  Mshta                                2/2      19  Data, no rule  write a rule - the data is already there
+   15 P1   T1078.003  Local Accounts                       2/2      16  Some data      write a rule; more data would help: Logon Session Metadata
+
+full list incl. pre-compromise: <ROOT>/output/acmetest/<DATE>/data/threat_priorities.csv
+data needed per ATT&CK data type: <ROOT>/output/acmetest/<DATE>/data/threat_data_needs.csv
+tiers: P1 - used by all 2, P2 = 2+ groups, P3 = one group; ties broken by ATT&CK-wide use

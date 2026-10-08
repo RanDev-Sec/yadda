@@ -1,0 +1,24 @@
+rule r03_portproxy {
+  meta:
+    author = "yadda test fixture"
+    description = "netsh portproxy via command line OR via registry (OR of event types)"
+    mitre_attack_technique = "T1090"
+    severity = "Medium"
+
+  events:
+    (
+        $x.metadata.event_type = "PROCESS_LAUNCH" and
+        re.regex($x.target.process.command_line, `netsh.*portproxy.*add`) nocase
+    )
+    or
+    (
+        (
+        $x.metadata.event_type = "REGISTRY_CREATION" or
+        $x.metadata.event_type = "REGISTRY_MODIFICATION"
+        ) and
+        $x.target.registry.registry_key = "HKLM\\System\\CurrentControlSet\\Services\\PortProxy\\v4tov4"
+    )
+
+  condition:
+    $x
+}

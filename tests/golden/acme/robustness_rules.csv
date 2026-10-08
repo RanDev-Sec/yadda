@@ -1,0 +1,13 @@
+rule,techniques,robustness,precision,weakest_fields,status,basis,why_not_fully_scored,fields_not_scored,event_variables,branches,shadow_files
+r01_win_schtasks_create,T1053.005,1,2,Image (match),scored,"endpoint, scored as Sysmon",,,1,1,r01_win_schtasks_create_f74c76__e__0_0.yml
+r02_lsass_access,T1003.001,1,4,SourceImage (exclusion),scored,"endpoint, scored as Sysmon",,,1,1,r02_lsass_access_b65405__p__0_0.yml
+r03_portproxy,T1090,3,3,TargetObject (match),scored,"endpoint, scored as Sysmon",,,1,3,r03_portproxy_0f1ecb__x__0_0.yml r03_portproxy_0f1ecb__x__1_0.yml r03_portproxy_0f1ecb__x__2_0.yml
+r04_service_list,T1543.003,,,,not scored,Windows event log,$svc: event 7045 not in the calculator's dictionary; no scorable field (only the event ID / fields the calculator doesn't know),target.application,1,1,r04_service_list_995684__svc__0_0.yml
+r05_okta_push_spam,T1621,,,,implementations only (not Windows),not scorable - calculator has Windows/Sysmon scores only (OKTA),$l: not scorable - calculator has Windows/Sysmon scores only (OKTA),,1,1,r05_okta_push_spam_618ba0__l__0_0.yml r05_okta_push_spam_618ba0__l__0_1.yml
+r06_github_2fa_disabled,T1556,,,,implementations only (not Windows),not scorable - calculator has Windows/Sysmon scores only (GITHUB),$g: no ATT&CK data component known for its event/log type,,1,1,r06_github_2fa_disabled_dd9800__g__0_0.yml
+r07_comment_and_negation,T1059.001,2,2,CommandLine (match),scored (partial),"endpoint, scored as Sysmon",$e: no scorable field (only the event ID / fields the calculator doesn't know),target.process.command_line,1,2,r07_comment_and_negation_180101__e__0_0.yml r07_comment_and_negation_180101__e__1_0.yml
+r08_untagged,,2,2,QueryName (match),scored,"endpoint, scored as Sysmon",,,1,1,r08_untagged_135f6e__e__0_0.yml
+r09_revoked_tag,T1685,,,,implementations only (not Windows),Windows endpoint event the calculator has no Sigma category for,$e: Windows endpoint event the calculator has no Sigma category for,,1,1,r09_revoked_tag_55886d__e__0_0.yml
+r10_never_fired,T1566.001,3,3,TargetFilename (match),scored,"endpoint, scored as Sysmon",,,1,1,r10_never_fired_6ab5e6__f__0_0.yml
+r12_login_then_exec,T1078,1,1,Image (match),scored (partial),"endpoint, scored as Sysmon; not scorable - calculator has Windows/Sysmon scores only",$login: not scorable - calculator has Windows/Sysmon scores only,,2,2,r12_login_then_exec_c644a4__login__0_0.yml r12_login_then_exec_c644a4__login__0_1.yml r12_login_then_exec_c644a4__proc__1_0.yml
+r13_o365_download,T1530,,,,implementations only (not Windows),not scorable - calculator has Windows/Sysmon scores only (OFFICE_365),$d: not scorable - calculator has Windows/Sysmon scores only (OFFICE_365),,1,1,r13_o365_download_be65ec__d__0_0.yml

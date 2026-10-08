@@ -1,0 +1,34 @@
+log_type,platforms,product
+WINEVTLOG.*|WINDOWS_.*|POWERSHELL.*,Windows,Windows event logs / Sysmon / Defender / DHCP (also on-prem AD via Security log)
+CS_EDR|CS_FDR.*,Windows;Linux;macOS,CrowdStrike Falcon telemetry (not CS_ALERTS / CS_DETECTS: those are alerts)
+SENTINELONE_.*|SENTINEL_.*,Windows;Linux;macOS,SentinelOne
+MICROSOFT_DEFENDER_ENDPOINT.*|WINDOWS_DEFENDER_ATP,Windows;Linux;macOS,Microsoft Defender for Endpoint
+CB_EDR|CARBON_BLACK.*,Windows;Linux;macOS,Carbon Black
+OSQUERY.*,Windows;Linux;macOS,osquery
+AUDITD|LINUX.*|NIX_SYSTEM|LINUX_SYSMON|UNIX.*,Linux,Linux auditd / syslog / Sysmon for Linux
+MACOS.*|JAMF.*,macOS,macOS unified log / Jamf
+OFFICE_365,Office Suite;Identity Provider;SaaS,Microsoft 365 (management activity: Exchange / SharePoint / Entra / Purview DLP)
+MICROSOFT_DEFENDER_MAIL|EXCHANGE_MAIL,Office Suite,Microsoft Defender for Office 365 / Exchange
+WORKSPACE_.*|GOOGLE_WORKSPACE.*,Office Suite;Identity Provider;SaaS,Google Workspace
+AZURE_AD.*|MICROSOFT_ENTRA.*,Identity Provider;Office Suite;SaaS,Entra ID (Azure AD) sign-in and audit
+MICROSOFT_DEFENDER_IDENTITY,Identity Provider,Microsoft Defender for Identity
+OKTA.*,Identity Provider;SaaS,Okta
+ONELOGIN.*|PING.*|DUO_.*,Identity Provider,Other identity providers
+AWS_CLOUDTRAIL|AWS_CONFIG|AWS_IAM,IaaS,AWS control plane
+AZURE_ACTIVITY|AZURE_RESOURCE_LOGS,IaaS,Azure control plane
+GCP_CLOUDAUDIT,IaaS,Google Cloud audit logs
+KUBERNETES.*|GCP_KUBERNETES.*|DOCKER.*,Containers,Kubernetes / Docker
+VMWARE_ESX.*|VMWARE_VCENTER.*|VMWARE_VSPHERE.*,ESXi,VMware ESXi / vCenter
+GITHUB|ATLASSIAN_.*|JIRA|SALESFORCE.*|SLACK.*|ZOOM.*|BOX.*|SNOWFLAKE.*,SaaS,SaaS audit logs
+CISCO_ROUTER|CISCO_IOS|CISCO_SWITCH|CISCO_ACI|CISCO_NXOS|JUNIPER_JUNOS|CISCO_ISE|ARISTA.*,Network Devices,Network device logs (device itself)
+PAN_FIREWALL|CISCO_ASA_FIREWALL|CISCO_FIREPOWER.*|CHECKPOINT_FIREWALL|FORTINET_FIREWALL|SONICWALL.*|JUNIPER_FIREWALL|SOPHOS_FIREWALL|WATCHGUARD.*,network;Network Devices,Firewall appliances: network traffic for every platform + the device's own events
+AWS_VPC_FLOW|AZURE_NSG_FLOW|AZURE_FIREWALL|GCP_FIREWALL|AWS_NETWORK_FIREWALL|GCP_VPC_FLOW|BRO_JSON|ZEEK.*|SURICATA.*|CISCO_UMBRELLA|ZSCALER.*|MCAFEE_WEBGATEWAY|INFOBLOX.*|F5_.*|BARRACUDA.*|NETFLOW.*|DARKTRACE.*|CORELIGHT.*|VECTRA.*|EXTRAHOP.*,network,"Network sensors, firewalls, proxies, DNS: count for network inputs on every platform"
+CYBERARK.*|BEYONDTRUST.*|THYCOTIC.*|DELINEA.*,,"Privileged access management: ATT&CK Enterprise has no platform for it, so its events count for no route"
+SQL_SERVER|MSSQL.*|ORACLE_DB.*|POSTGRESQL.*|MYSQL.*|MONGODB.*,,"Databases: ATT&CK Enterprise has no database platform, so their events count for no route"
+PROOFPOINT.*|MIMECAST.*|ABNORMAL_SECURITY.*|CISCO_EMAIL_SECURITY,,"Email security gateways: not the mailbox's own logs that MITRE's Office Suite analytics read; their alerts count under security-product detections when they carry ATT&CK ids"
+.*_ALERTS?|.*_ALERT_.*|MICROSOFT_GRAPH_ALERT|.*_DETECTIONS?,alerts,"Security-product alert feeds: what a product detected, not telemetry about the systems; they never make a platform seen (alerts with ATT&CK ids count under product detections)"
+BINDPLANE_AGENT|BINDPLANE.*,,"Collector health (BindPlane): about the log pipeline, not the monitored systems"
+UDM,,"Generic UDM events with no source log type: the platform can't be known"
+SOLARIS.*|AIX.*|HPUX.*,,"Solaris / AIX / HP-UX: ATT&CK Enterprise has no platform for these Unix systems"
+CS_DETECTS|CS_ALERTS|CS_STREAM,alerts;Windows;Linux;macOS,"CrowdStrike Falcon alerts (rules on them watch hosts)"
+GUARDDUTY|AWS_GUARDDUTY,alerts;IaaS,"AWS GuardDuty findings (rules on them watch AWS)"

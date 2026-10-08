@@ -1,0 +1,225 @@
+o365_group_modification_add_member_success:
+  alerting: true
+  archived: false
+  enabled: false
+  run_frequency: LIVE
+entra_id_application_creation:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+ttp_windows_suspicious_filewrites_to_sharepoint_layouts:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+renamed_createdump_utility_execution:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+github_enterprise_deleted:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+github_organization_removed_from_enterprise:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+mitre_attack_T1021_002_windows_admin_share_with_user_entity:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+github_repository_branch_protection_rules_disabled:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+o365_onedrive_anonymous_link_created_updated:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+potential_suspicious_activity_using_secedit:
+  alerting: true
+  archived: false
+  enabled: false
+  run_frequency: LIVE
+github_high_number_of_non_public_github_repositories_cloned:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+lsass_dump_keyword_command_line:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+ms_graph_delete_method:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+github_dependabot_vulnerability_alerts_disabled:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+github_personal_access_token_created_from_tor_ip_address:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+currentcontrolset_autorun_keys_modification:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+copy_from_or_to_admin_share_or_sysvol_folder:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+github_oauth_application_access_restrictions_disabled:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+ms_graph_group_creation_success:
+  alerting: true
+  archived: false
+  enabled: false
+  run_frequency: LIVE
+github_repository_archived_or_deleted:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+modify_user_shell_folders_startup_value:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+create_dump_process_dump:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+github_high_number_of_non_public_github_repositories_downloaded:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+port_proxy_forwarding_T1090_cisa_report:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+github_user_blocked_from_accessing_organization_repositories:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+ms_graph_failed_file_downloads_multiple_attempts:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+recon_environment_enumeration_network_cisa_report:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+recon_environment_enumeration_active_directory_cisa_report:
+  alerting: true
+  archived: false
+  enabled: false
+  run_frequency: LIVE
+okta_user_account_lockout:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+suspicious_asn_watchlist:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+potential_lsass_process_dump_via_procdump:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+win_susp_or_malicious_service_created:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+onelogin_user_authentication_factor_removed:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+okta_user_rejected_multiple_push_notifications:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+ms_graph_estimate_access:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+github_enterprise_audit_log_stream_modified:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+new_run_key_pointing_to_suspicious_folder:
+  alerting: true
+  archived: false
+  enabled: false
+  run_frequency: LIVE
+adfs_dkm_key_access:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+o365_entra_id_app_permissions_percent_threshold_exceeded:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+okta_phishing_detection_with_fastpass_origin_check:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+entra_id_add_user_to_admin_role:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+mitre_attack_T1053_005_windows_creation_of_scheduled_task:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+github_two_factor_authentication_requirement_disabled:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+potential_credential_dumping_activity_via_lsass:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE
+o365_file_download:
+  alerting: true
+  archived: false
+  enabled: true
+  run_frequency: LIVE

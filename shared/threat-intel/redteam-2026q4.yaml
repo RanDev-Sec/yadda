@@ -1,0 +1,10 @@
+# Red team plan or threat-intel report: list the ATT&CK techniques, then: yadda check <environment> redteam-2026q4.yaml
+version: 1
+file_type: group-administration
+domain: enterprise-attack
+groups:
+  - group_name: Red team Q4 2026
+    campaign: External red team, scope agreed 2026-09-20
+    technique_id: [T1566.001, T1059.001, T1053.005, T1003.001, T1021.002, T1110.003, T1486]
+    software_id: []
+    enabled: true

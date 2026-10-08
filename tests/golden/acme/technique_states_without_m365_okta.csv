@@ -1,0 +1,503 @@
+technique,state,route_platform,route_level,inputs_seen,missing_inputs
+T1001,buildable,Windows,all,1/1,
+T1001.001,buildable,Windows,all,3/3,
+T1001.002,buildable,Windows,all,4/4,
+T1001.003,buildable,Windows,all,2/2,
+T1003,thin,Windows,some,3/4,File Access
+T1003.001,limited,Windows,some,4/5,User Account Metadata
+T1003.002,thin,Windows,some,3/4,File Modification
+T1003.003,thin,Windows,some,2/4,File Modification | Volume Creation
+T1003.004,thin,Windows,some,2/4,File Modification | Module Load
+T1003.005,thin,Windows,some,2/3,File Access
+T1003.006,thin,Windows,some,2/3,Active Directory Object Deletion
+T1005,buildable,Windows,all,2/2,
+T1006,buildable,Windows,all,2/2,
+T1007,buildable,Windows,all,2/2,
+T1008,buildable,Windows,all,2/2,
+T1010,buildable,Windows,all,2/2,
+T1011,buildable,Windows,all,3/3,
+T1011.001,buildable,Windows,all,3/3,
+T1012,buildable,Windows,all,3/3,
+T1014,thin,Windows,some,2/3,Driver Load
+T1016,buildable,Windows,all,2/2,
+T1016.001,buildable,Windows,all,3/3,
+T1016.002,buildable,Windows,all,2/2,
+T1018,buildable,Windows,all,2/2,
+T1020,buildable,Windows,all,2/2,
+T1021,buildable,Windows,all,3/3,
+T1021.001,thin,Windows,some,3/4,Logon Session Metadata
+T1021.002,buildable,Windows,all,3/3,
+T1021.003,thin,Windows,some,3/4,Module Load
+T1021.005,buildable,Windows,all,3/3,
+T1021.006,thin,Windows,some,3/4,Service Metadata
+T1021.007,unseen,Identity Provider,unseen,0/1,Logon Session Creation
+T1025,thin,Windows,some,1/3,Drive Creation | File Access
+T1027,buildable,Windows,all,2/2,
+T1027.001,thin,Windows,some,2/3,File Access
+T1027.002,buildable,Windows,all,2/2,
+T1027.003,thin,Windows,some,2/3,File Access
+T1027.004,buildable,Windows,all,3/3,
+T1027.005,thin,Windows,some,2/3,Application Log Content
+T1027.006,thin,Windows,some,3/4,File Metadata
+T1027.007,thin,Windows,some,1/2,Module Load
+T1027.008,thin,Windows,some,2/3,File Metadata
+T1027.009,thin,Windows,some,2/3,File Metadata
+T1027.010,buildable,Windows,all,1/1,
+T1027.011,thin,Windows,some,1/2,WMI Creation
+T1027.012,thin,Windows,some,2/3,File Metadata
+T1027.013,thin,Windows,some,2/3,Module Load
+T1027.014,thin,Windows,some,2/3,Module Load
+T1027.015,buildable,Windows,all,2/2,
+T1027.016,buildable,Windows,all,3/3,
+T1027.017,buildable,Windows,all,3/3,
+T1027.018,thin,Windows,some,3/5,Module Load | Script Execution
+T1029,buildable,Windows,all,2/2,
+T1030,buildable,Windows,all,2/2,
+T1033,buildable,Windows,all,2/2,
+T1036,buildable,Windows,all,2/2,
+T1036.001,thin,Windows,some,2/3,File Metadata
+T1036.002,thin,Windows,some,2/3,File Metadata
+T1036.003,buildable,Windows,all,3/3,
+T1036.004,thin,Windows,some,2/3,Scheduled Job Creation
+T1036.005,buildable,Windows,all,2/2,
+T1036.007,buildable,Windows,all,2/2,
+T1036.008,buildable,Windows,all,2/2,
+T1036.010,blind,Windows,none,0/2,User Account Creation | User Account Metadata
+T1036.012,buildable,Windows,all,2/2,
+T1037,thin,Windows,some,2/3,Scheduled Job Creation
+T1037.001,thin,Windows,some,2/4,File Access | Script Execution
+T1037.003,thin,Windows,some,1/3,Network Share Access | Script Execution
+T1039,thin,Windows,some,1/2,Network Share Access
+T1040,buildable,Windows,all,2/2,
+T1041,thin,Windows,some,3/4,File Access
+T1046,buildable,Windows,all,2/2,
+T1047,thin,Windows,some,2/3,WMI Creation
+T1048,buildable,Windows,all,3/3,
+T1048.001,buildable,Windows,all,2/2,
+T1048.002,thin,Windows,some,3/4,File Access
+T1048.003,thin,Windows,some,3/4,File Access
+T1049,buildable,Windows,all,2/2,
+T1052,thin,Windows,some,2/4,Drive Creation | File Access
+T1052.001,thin,Windows,some,2/4,Drive Creation | File Access
+T1053,thin,Windows,some,1/3,File Modification | Scheduled Job Creation
+T1053.002,thin,Windows,some,1/2,Scheduled Job Creation
+T1053.005,detected,Windows,some,3/5,Scheduled Job Creation | Scheduled Job Modification
+T1055,thin,Windows,some,2/3,Module Load
+T1055.001,thin,Windows,some,2/4,Module Load | Named Pipe Metadata
+T1055.002,thin,Windows,some,3/4,Process Modification
+T1055.003,thin,Windows,some,2/3,Process Modification
+T1055.004,thin,Windows,some,2/3,Process Modification
+T1055.005,thin,Windows,some,1/3,Module Load | Process Modification
+T1055.011,buildable,Windows,all,2/2,
+T1055.012,thin,Windows,some,2/3,Process Modification
+T1055.013,buildable,Windows,all,3/3,
+T1055.015,thin,Windows,some,2/3,Process Modification
+T1056,thin,Windows,some,1/2,File Access
+T1056.001,thin,Windows,some,3/4,File Access
+T1056.002,buildable,Windows,all,2/2,
+T1056.003,buildable,Windows,all,2/2,
+T1056.004,thin,Windows,some,1/3,Module Load | Process Modification
+T1057,buildable,Windows,all,2/2,
+T1059,buildable,Windows,all,1/1,
+T1059.001,detected,Windows,some,2/3,Module Load
+T1059.003,thin,Windows,some,1/3,Module Load | Script Execution
+T1059.005,thin,Windows,some,1/2,Module Load
+T1059.006,buildable,Windows,all,2/2,
+T1059.007,thin,Windows,some,1/3,Module Load | Script Execution
+T1059.009,unknown,,,,
+T1059.010,buildable,Windows,all,3/3,
+T1059.011,buildable,Windows,all,2/2,
+T1068,thin,Windows,some,1/3,Driver Load | Logon Session Metadata
+T1069,buildable,Windows,all,2/2,
+T1069.001,buildable,Windows,all,1/1,
+T1069.002,buildable,Windows,all,2/2,
+T1069.003,unseen,SaaS,unseen,0/1,Group Enumeration
+T1070,thin,Windows,some,1/3,Application Log Content | File Deletion
+T1070.003,thin,Windows,some,1/3,File Deletion | File Modification
+T1070.004,thin,Windows,some,1/3,File Access | File Deletion
+T1070.005,buildable,Windows,all,4/4,
+T1070.006,blind,Windows,none,0/2,File Access | File Metadata
+T1070.007,thin,Windows,some,3/4,Firewall Rule Modification
+T1070.008,thin,Windows,some,1/4,Application Log Content | File Deletion | File Modification
+T1070.009,thin,Windows,some,2/4,Scheduled Job Creation | User Account Deletion
+T1070.010,thin,Windows,some,1/2,File Deletion
+T1071,buildable,Windows,all,2/2,
+T1071.001,buildable,Windows,all,2/2,
+T1071.002,buildable,Windows,all,3/3,
+T1071.003,buildable,Windows,all,3/3,
+T1071.004,buildable,Windows,all,2/2,
+T1071.005,buildable,Windows,all,2/2,
+T1072,thin,Windows,some,1/2,Application Log Content
+T1074,thin,Windows,some,2/3,File Access
+T1074.001,thin,Windows,some,2/3,File Access
+T1074.002,thin,Windows,some,2/3,Network Share Access
+T1078,detected,Windows,all,3/3,
+T1078.001,buildable,Windows,all,1/1,
+T1078.002,thin,Windows,some,2/3,Logon Session Metadata
+T1078.003,thin,Windows,some,1/2,Logon Session Metadata
+T1078.004,unseen,Identity Provider,unseen,0/2,Logon Session Metadata | User Account Authentication
+T1080,thin,Windows,some,1/2,Network Share Access
+T1082,buildable,Windows,all,3/3,
+T1083,buildable,Windows,all,2/2,
+T1087,thin,Windows,some,1/2,Group Enumeration
+T1087.001,buildable,Windows,all,1/1,
+T1087.002,buildable,Windows,all,3/3,
+T1087.003,buildable,Windows,all,2/2,
+T1087.004,unseen,Office Suite,unseen,0/2,Command Execution | User Account Metadata
+T1090,unverified,Windows,all,3/3,
+T1090.001,buildable,Windows,all,3/3,
+T1090.002,buildable,Windows,all,3/3,
+T1090.003,buildable,Windows,all,3/3,
+T1090.004,buildable,Windows,all,2/2,
+T1091,thin,Windows,some,2/4,Drive Creation | File Access
+T1092,thin,Windows,some,2/3,Drive Creation
+T1095,buildable,Windows,all,2/2,
+T1098,thin,Windows,some,1/2,User Account Modification
+T1098.001,unseen,Identity Provider,unseen,0/1,User Account Modification
+T1098.002,thin,Windows,some,1/2,Application Log Content
+T1098.003,unseen,Identity Provider,unseen,0/1,User Account Modification
+T1098.005,blind,Windows,none,0/2,Active Directory Object Creation | Application Log Content
+T1098.007,blind,Windows,none,0/1,User Account Modification
+T1102,buildable,Windows,all,2/2,
+T1102.001,buildable,Windows,all,2/2,
+T1102.002,buildable,Windows,all,3/3,
+T1102.003,buildable,Windows,all,2/2,
+T1104,buildable,Windows,all,2/2,
+T1105,buildable,Windows,all,3/3,
+T1106,thin,Windows,some,2/3,Module Load
+T1110,buildable,Windows,all,1/1,
+T1110.001,buildable,Windows,all,1/1,
+T1110.002,thin,Windows,some,3/4,File Access
+T1110.003,buildable,Windows,all,1/1,
+T1110.004,buildable,Windows,all,1/1,
+T1111,buildable,Windows,all,3/3,
+T1112,buildable,Windows,all,2/2,
+T1113,thin,Windows,some,1/2,Module Load
+T1114,thin,Windows,some,2/4,Application Log Content | Network Share Access
+T1114.001,thin,Windows,some,3/4,File Access
+T1114.002,thin,Windows,some,3/4,Application Log Content
+T1114.003,thin,Windows,some,2/3,Cloud Service Metadata
+T1115,buildable,Windows,all,2/2,
+T1119,buildable,Windows,all,2/2,
+T1120,buildable,Windows,all,2/2,
+T1123,buildable,Windows,all,3/3,
+T1124,thin,Windows,some,4/6,Module Load | Scheduled Job Creation
+T1125,thin,Windows,some,3/4,Module Load
+T1127,thin,Windows,some,3/4,Module Load
+T1127.001,thin,Windows,some,4/7,Module Load | Process Modification | Script Execution
+T1127.002,thin,Windows,some,1/2,Module Load
+T1127.003,buildable,Windows,all,3/3,
+T1129,thin,Windows,some,3/4,Module Load
+T1132,buildable,Windows,all,3/3,
+T1132.001,thin,Windows,some,3/4,Script Execution
+T1132.002,thin,Windows,some,3/4,Script Execution
+T1133,thin,Windows,some,2/3,Application Log Content
+T1134,thin,Windows,some,2/4,Active Directory Object Modification | Logon Session Metadata
+T1134.001,buildable,Windows,all,2/2,
+T1134.002,thin,Windows,some,2/4,Active Directory Object Modification | Logon Session Metadata
+T1134.003,thin,Windows,some,1/2,Logon Session Metadata
+T1134.004,buildable,Windows,all,1/1,
+T1134.005,blind,Windows,none,0/2,Active Directory Object Modification | User Account Metadata
+T1135,thin,Windows,some,3/4,Named Pipe Metadata
+T1136,thin,Windows,some,1/2,User Account Creation
+T1136.001,thin,Windows,some,1/2,User Account Creation
+T1136.002,thin,Windows,some,1/2,User Account Creation
+T1136.003,unseen,SaaS,unseen,0/1,User Account Creation
+T1137,thin,Windows,some,3/4,Application Log Content
+T1137.001,thin,Windows,some,4/5,File Metadata
+T1137.002,thin,Windows,some,4/5,Module Load
+T1137.003,thin,Windows,some,2/4,Application Log Content | Module Load
+T1137.004,thin,Windows,some,2/4,Application Log Content | Module Load
+T1137.005,thin,Windows,some,2/4,Application Log Content | Module Load
+T1137.006,thin,Windows,some,3/4,File Modification
+T1140,buildable,Windows,all,3/3,
+T1176,buildable,Windows,all,4/4,
+T1176.001,buildable,Windows,all,4/4,
+T1176.002,buildable,Windows,all,3/3,
+T1185,thin,Windows,some,3/7,Logon Session Metadata | Module Load | Process Modification | User Account Metadata
+T1187,thin,Windows,some,3/4,File Modification
+T1189,thin,Windows,some,5/7,Application Log Content | Process Modification
+T1190,thin,Windows,some,2/4,Application Log Content | Module Load
+T1195,thin,Windows,some,3/5,File Metadata | Module Load
+T1195.001,thin,Windows,some,4/6,File Metadata | Module Load
+T1195.002,thin,Windows,some,5/8,Driver Load | File Metadata | Module Load
+T1195.003,thin,Windows,some,1/5,Driver Load | File Metadata | Host Status | Module Load
+T1197,buildable,Windows,all,4/4,
+T1199,thin,Windows,some,2/4,Application Log Content | Logon Session Metadata
+T1200,thin,Windows,some,4/8,Application Log Content | Drive Creation | Driver Load | Module Load
+T1201,buildable,Windows,all,3/3,
+T1202,buildable,Windows,all,3/3,
+T1203,thin,Windows,some,3/4,Application Log Content
+T1204,thin,Windows,some,3/4,Application Log Content
+T1204.001,buildable,Windows,all,4/4,
+T1204.002,thin,Windows,some,2/3,File Metadata
+T1204.004,buildable,Windows,all,5/5,
+T1204.005,buildable,Windows,all,2/2,
+T1205,buildable,Windows,all,4/4,
+T1205.001,buildable,Windows,all,3/3,
+T1205.002,thin,Windows,some,4/6,Driver Load | Module Load
+T1207,thin,Windows,some,2/5,Active Directory Credential Request | Active Directory Object Creation | Active Directory Object Modification
+T1210,thin,Windows,some,5/7,Application Log Content | Module Load
+T1211,thin,Windows,some,1/2,Module Load
+T1212,buildable,Windows,all,2/2,
+T1213,blind,Windows,none,0/2,Cloud Storage Access | Network Share Access
+T1213.001,unseen,SaaS,unseen,0/3,Application Log Content | Logon Session Creation | Network Traffic Content
+T1213.002,thin,Windows,some,1/3,Application Log Content | Cloud Service Metadata
+T1213.003,unseen,SaaS,unseen,0/3,Application Log Content | Cloud Service Metadata | Logon Session Creation
+T1213.004,unseen,SaaS,unseen,0/2,Application Log Content | Logon Session Creation
+T1213.005,unseen,Office Suite,unseen,0/2,Application Log Content | Logon Session Creation
+T1213.006,buildable,Windows,all,3/3,
+T1216,thin,Windows,some,4/5,Module Load
+T1216.001,thin,Windows,some,3/4,Module Load
+T1216.002,thin,Windows,some,3/4,Module Load
+T1217,buildable,Windows,all,3/3,
+T1218,thin,Windows,some,2/3,Module Load
+T1218.001,thin,Windows,some,3/4,Module Load
+T1218.002,thin,Windows,some,2/4,Module Load | Windows Registry Key Creation
+T1218.003,thin,Windows,some,6/7,Windows Registry Key Creation
+T1218.004,thin,Windows,some,3/4,Module Load
+T1218.005,buildable,Windows,all,3/3,
+T1218.007,thin,Windows,some,2/3,Module Load
+T1218.008,thin,Windows,some,2/3,Module Load
+T1218.009,thin,Windows,some,5/7,Module Load | Windows Registry Key Creation
+T1218.010,thin,Windows,some,2/3,Module Load
+T1218.011,thin,Windows,some,3/4,Module Load
+T1218.012,thin,Windows,some,3/4,Module Load
+T1218.013,thin,Windows,some,5/6,Module Load
+T1218.014,thin,Windows,some,5/7,Module Load | Windows Registry Key Creation
+T1218.015,thin,Windows,some,3/4,Module Load
+T1219,thin,Windows,some,5/6,Windows Registry Key Creation
+T1219.001,buildable,Windows,all,3/3,
+T1219.002,thin,Windows,some,2/3,Firewall Rule Modification
+T1219.003,blind,Windows,none,0/1,Drive Creation
+T1220,thin,Windows,some,1/2,Module Load
+T1221,buildable,Windows,all,2/2,
+T1222,thin,Windows,some,3/5,Active Directory Object Modification | File Metadata
+T1222.001,thin,Windows,some,3/6,Active Directory Object Modification | File Metadata | WMI Creation
+T1480,thin,Windows,some,7/10,Module Load | Process Modification | WMI Creation
+T1480.001,thin,Windows,some,5/7,Module Load | WMI Creation
+T1480.002,buildable,Windows,all,2/2,
+T1482,thin,Windows,some,4/5,Module Load
+T1484,thin,Windows,some,1/3,Active Directory Object Modification | File Modification
+T1484.001,thin,Windows,some,2/5,Active Directory Object Modification | File Modification | User Account Modification
+T1484.002,thin,Windows,some,1/3,Active Directory Object Modification | User Account Modification
+T1485,thin,Windows,some,2/3,File Deletion
+T1486,thin,Windows,some,2/3,File Modification
+T1489,thin,Windows,some,2/4,Logon Session Metadata | Service Metadata
+T1490,thin,Windows,some,2/4,File Deletion | Service Metadata
+T1491,thin,Windows,some,1/3,Application Log Content | File Modification
+T1491.001,thin,Windows,some,2/4,File Access | File Modification
+T1491.002,thin,Windows,some,2/3,File Modification
+T1495,thin,Windows,some,1/2,Driver Load
+T1496,thin,Windows,some,2/3,Host Status
+T1496.001,thin,Windows,some,2/3,Scheduled Job Creation
+T1496.002,buildable,Windows,all,2/2,
+T1496.003,unseen,SaaS,unseen,0/2,Application Log Content | User Account Authentication
+T1496.004,unseen,SaaS,unseen,0/3,Application Log Content | Cloud Service Modification | User Account Metadata
+T1497,thin,Windows,some,1/2,Module Load
+T1497.001,thin,Windows,some,2/3,Module Load
+T1497.002,thin,Windows,some,2/3,Logon Session Metadata
+T1497.003,thin,Windows,some,1/2,Module Load
+T1498,buildable,Windows,all,2/2,
+T1498.001,buildable,Windows,all,2/2,
+T1498.002,thin,Windows,some,1/2,Host Status
+T1499,thin,Windows,some,1/3,Application Log Content | Host Status
+T1499.001,thin,Windows,some,2/3,Host Status
+T1499.002,thin,Windows,some,1/3,Application Log Content | Host Status
+T1499.003,thin,Windows,some,1/3,Application Log Content | Host Status
+T1499.004,thin,Windows,some,2/3,Application Log Content
+T1505,thin,Windows,some,1/3,Application Log Content | Scheduled Job Creation
+T1505.001,thin,Windows,some,1/3,Module Load | Script Execution
+T1505.002,thin,Windows,some,3/5,Application Log Content | Module Load
+T1505.003,buildable,Windows,all,4/4,
+T1505.004,thin,Windows,some,2/6,Application Log Content | File Modification | Module Load | Service Modification
+T1505.005,thin,Windows,some,3/4,Module Load
+T1518,buildable,Windows,all,2/2,
+T1518.001,thin,Windows,some,1/2,Module Load
+T1518.002,buildable,Windows,all,3/3,
+T1526,unseen,Identity Provider,unseen,0/2,Cloud Service Enumeration | Logon Session Creation
+T1528,unseen,Identity Provider,unseen,0/1,Application Log Content
+T1529,thin,Windows,some,1/2,Host Status
+T1530,limited,SaaS,unseen,0/1,Cloud Storage Access
+T1531,thin,Windows,some,1/2,User Account Modification
+T1534,thin,Windows,some,3/5,Application Log Content | Logon Session Metadata
+T1537,unseen,SaaS,unseen,0/2,Cloud Storage Metadata | Cloud Storage Modification
+T1538,unseen,Identity Provider,unseen,0/3,Application Log Content | Logon Session Creation | User Account Authentication
+T1539,thin,Windows,some,2/3,File Modification
+T1542,thin,Windows,some,2/3,Drive Access
+T1542.001,thin,Windows,some,2/3,Drive Access
+T1542.002,blind,Windows,none,0/1,Driver Load
+T1542.003,thin,Windows,some,1/2,Drive Access
+T1543,buildable,Windows,all,3/3,
+T1543.003,detected,Windows,some,3/4,Driver Load
+T1546,thin,Windows,some,2/4,Scheduled Job Creation | WMI Creation
+T1546.001,thin,Windows,some,2/3,Logon Session Metadata
+T1546.002,buildable,Windows,all,2/2,
+T1546.003,thin,Windows,some,1/3,Module Load | WMI Creation
+T1546.007,thin,Windows,some,2/3,Module Load
+T1546.008,thin,Windows,some,3/4,File Metadata
+T1546.009,thin,Windows,some,2/3,Module Load
+T1546.010,thin,Windows,some,2/3,Module Load
+T1546.011,thin,Windows,some,3/4,Module Load
+T1546.012,thin,Windows,some,3/4,Windows Registry Key Creation
+T1546.013,thin,Windows,some,3/4,File Modification
+T1546.015,thin,Windows,some,2/3,Module Load
+T1546.016,buildable,Windows,all,2/2,
+T1546.018,unknown,,,,
+T1547,buildable,Windows,all,2/2,
+T1547.001,buildable,Windows,all,3/3,
+T1547.002,thin,Windows,some,1/2,Module Load
+T1547.003,thin,Windows,some,3/4,Module Load
+T1547.004,thin,Windows,some,2/4,Module Load | Windows Registry Key Access
+T1547.005,thin,Windows,some,2/3,Module Load
+T1547.008,thin,Windows,some,2/6,Driver Load | File Modification | Module Load | Windows Registry Key Creation
+T1547.009,thin,Windows,some,2/4,File Metadata | File Modification
+T1547.010,thin,Windows,some,3/4,Module Load
+T1547.012,thin,Windows,some,3/4,Module Load
+T1547.014,thin,Windows,some,2/4,Logon Session Metadata | Windows Registry Key Creation
+T1548,thin,Windows,some,2/3,Logon Session Metadata
+T1548.002,thin,Windows,some,3/5,Logon Session Metadata | Module Load
+T1548.005,unseen,Identity Provider,unseen,0/2,User Account Authentication | User Account Metadata
+T1550,buildable,Windows,all,2/2,
+T1550.001,unseen,Identity Provider,unseen,0/1,User Account Authentication
+T1550.002,thin,Windows,some,3/4,Active Directory Credential Request
+T1550.003,thin,Windows,some,3/5,Active Directory Credential Request | Module Load
+T1550.004,unseen,Office Suite,unseen,0/1,Logon Session Creation
+T1552,buildable,Windows,all,3/3,
+T1552.001,buildable,Windows,all,3/3,
+T1552.002,thin,Windows,some,2/3,Windows Registry Key Access
+T1552.003,unknown,,,,
+T1552.004,thin,Windows,some,2/3,Network Share Access
+T1552.006,thin,Windows,some,2/4,Network Share Access | Script Execution
+T1552.008,unseen,Office Suite,unseen,0/1,Application Log Content
+T1553,buildable,Windows,all,3/3,
+T1553.002,thin,Windows,some,1/2,Module Load
+T1553.003,thin,Windows,some,1/3,File Modification | Module Load
+T1553.004,thin,Windows,some,2/3,Windows Registry Key Creation
+T1553.005,thin,Windows,some,1/3,File Access | File Metadata
+T1553.006,buildable,Windows,all,2/2,
+T1554,thin,Windows,some,2/3,File Modification
+T1555,thin,Windows,some,2/3,File Access
+T1555.003,thin,Windows,some,2/3,File Access
+T1555.004,thin,Windows,some,2/3,File Metadata
+T1555.005,thin,Windows,some,2/3,File Metadata
+T1556,unverified,Windows,some,2/3,Module Load
+T1556.001,thin,Windows,some,2/4,File Modification | Module Load
+T1556.002,thin,Windows,some,2/3,Module Load
+T1556.005,thin,Windows,some,2/3,Active Directory Object Modification
+T1556.006,blind,Windows,none,0/2,Active Directory Object Modification | Script Execution
+T1556.007,thin,Windows,some,1/3,Active Directory Object Modification | Module Load
+T1556.008,thin,Windows,some,3/4,Module Load
+T1556.009,unseen,Identity Provider,unseen,0/2,Active Directory Object Modification | Application Log Content
+T1557,buildable,Windows,all,2/2,
+T1557.001,buildable,Windows,all,4/4,
+T1557.002,buildable,Windows,all,2/2,
+T1557.003,thin,Windows,some,1/2,Application Log Content
+T1558,thin,Windows,some,1/2,Logon Session Metadata
+T1558.001,thin,Windows,some,1/3,Active Directory Credential Request | Logon Session Metadata
+T1558.002,thin,Windows,some,1/3,Active Directory Credential Request | Logon Session Metadata
+T1558.003,thin,Windows,some,2/4,Active Directory Credential Request | Logon Session Metadata
+T1558.004,thin,Windows,some,1/2,Active Directory Credential Request
+T1559,thin,Windows,some,1/2,Named Pipe Metadata
+T1559.001,thin,Windows,some,1/3,Module Load | Windows Registry Key Access
+T1559.002,thin,Windows,some,1/3,Module Load | Windows Registry Key Access
+T1560,thin,Windows,some,2/3,Module Load
+T1560.001,thin,Windows,some,2/3,Module Load
+T1560.002,thin,Windows,some,2/3,Module Load
+T1560.003,buildable,Windows,all,3/3,
+T1561,blind,Windows,none,0/2,Driver Load | User Account Metadata
+T1561.001,blind,Windows,none,0/2,Driver Load | User Account Metadata
+T1561.002,blind,Windows,none,0/2,Driver Load | User Account Metadata
+T1563,buildable,Windows,all,3/3,
+T1563.002,buildable,Windows,all,4/4,
+T1564,buildable,Windows,all,3/3,
+T1564.001,buildable,Windows,all,2/2,
+T1564.002,thin,Windows,some,1/2,User Account Creation
+T1564.003,buildable,Windows,all,2/2,
+T1564.004,thin,Windows,some,2/3,File Metadata
+T1564.005,thin,Windows,some,1/2,File Modification
+T1564.006,buildable,Windows,all,3/3,
+T1564.007,buildable,Windows,all,2/2,
+T1564.008,thin,Windows,some,1/2,Application Log Content
+T1564.010,buildable,Windows,all,2/2,
+T1564.011,buildable,Windows,all,2/2,
+T1564.012,thin,Windows,some,1/2,File Access
+T1565,thin,Windows,some,1/4,File Access | File Metadata | File Modification
+T1565.001,thin,Windows,some,1/4,File Deletion | File Metadata | File Modification
+T1565.002,thin,Windows,some,1/2,File Metadata
+T1565.003,thin,Windows,some,2/3,File Metadata
+T1566,thin,Windows,some,2/3,Application Log Content
+T1566.001,unverified,Windows,some,3/4,Application Log Content
+T1566.002,thin,Windows,some,2/3,Application Log Content
+T1566.003,buildable,Windows,all,3/3,
+T1566.004,blind,Windows,none,0/1,Application Log Content
+T1567,buildable,Windows,all,3/3,
+T1567.001,thin,Windows,some,2/3,File Access
+T1567.002,thin,Windows,some,2/3,File Access
+T1567.003,thin,Windows,some,2/3,File Access
+T1567.004,thin,Windows,some,2/3,File Access
+T1568,buildable,Windows,all,2/2,
+T1568.001,buildable,Windows,all,2/2,
+T1568.002,buildable,Windows,all,2/2,
+T1568.003,buildable,Windows,all,2/2,
+T1569,buildable,Windows,all,3/3,
+T1569.002,buildable,Windows,all,4/4,
+T1570,thin,Windows,some,2/3,Network Share Access
+T1571,buildable,Windows,all,2/2,
+T1572,buildable,Windows,all,2/2,
+T1573,thin,Windows,some,1/2,Module Load
+T1573.001,thin,Windows,some,1/2,Module Load
+T1573.002,thin,Windows,some,1/2,Module Load
+T1574,thin,Windows,some,3/4,Module Load
+T1574.001,thin,Windows,some,3/5,File Metadata | Module Load
+T1574.005,thin,Windows,some,2/4,File Metadata | Module Load
+T1574.007,buildable,Windows,all,3/3,
+T1574.008,thin,Windows,some,2/3,File Metadata
+T1574.009,thin,Windows,some,3/4,File Metadata
+T1574.010,thin,Windows,some,3/4,File Metadata
+T1574.011,thin,Windows,some,2/3,Service Modification
+T1574.012,thin,Windows,some,3/4,Module Load
+T1574.013,buildable,Windows,all,2/2,
+T1574.014,thin,Windows,some,2/3,Module Load
+T1606,buildable,Windows,all,2/2,
+T1606.001,buildable,Windows,all,2/2,
+T1606.002,buildable,Windows,all,1/1,
+T1611,buildable,Windows,all,2/2,
+T1614,buildable,Windows,all,1/1,
+T1614.001,thin,Windows,some,1/2,Windows Registry Key Access
+T1615,buildable,Windows,all,4/4,
+T1620,thin,Windows,some,2/4,Module Load | Script Execution
+T1621,unverified,Windows,all,1/1,
+T1622,buildable,Windows,all,1/1,
+T1648,unseen,Office Suite,unseen,0/2,Application Log Content | Cloud Service Modification
+T1649,blind,Windows,none,0/2,Active Directory Credential Request | Windows Registry Key Access
+T1652,buildable,Windows,all,2/2,
+T1653,buildable,Windows,all,1/1,
+T1654,thin,Windows,some,1/2,File Access
+T1657,buildable,Windows,all,2/2,
+T1659,buildable,Windows,all,3/3,
+T1665,buildable,Windows,all,1/1,
+T1667,thin,Windows,some,1/2,Application Log Content
+T1668,thin,Windows,some,1/2,Process Termination
+T1669,buildable,Windows,all,2/2,
+T1671,unseen,Office Suite,unseen,0/2,Active Directory Object Modification | Cloud Service Modification
+T1673,buildable,Windows,all,1/1,
+T1674,thin,Windows,some,2/3,Drive Creation
+T1677,unseen,SaaS,unseen,0/5,Cloud Service Metadata | Cloud Service Modification | Cloud Storage Access | Command Execution | File Metadata
+T1678,thin,Windows,some,1/2,Module Load
+T1679,thin,Windows,some,2/3,File Modification
+T1680,buildable,Windows,all,1/1,
+T1684,buildable,Windows,all,4/4,
+T1684.001,thin,Windows,some,1/2,Application Log Content
+T1684.002,blind,Windows,none,0/1,Application Log Content
+T1685,detected,Windows,some,2/3,Process Termination
+T1685.001,thin,Windows,some,2/4,Application Log Content | Service Metadata
+T1685.002,unseen,Identity Provider,unseen,0/1,Cloud Service Modification
+T1685.003,buildable,Windows,all,2/2,
+T1685.005,thin,Windows,some,1/3,Application Log Content | File Deletion
+T1686,buildable,Windows,all,2/2,
+T1686.003,thin,Windows,some,4/5,Windows Registry Key Creation
+T1687,thin,Windows,some,1/3,Driver Load | Service Metadata
+T1688,thin,Windows,some,2/3,Windows Registry Key Creation
+T1689,buildable,Windows,all,2/2,
+T1690,buildable,Windows,all,2/2,

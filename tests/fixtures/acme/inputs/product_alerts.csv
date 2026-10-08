@@ -1,0 +1,7 @@
+$log_type,$technique,$subtechnique,$event_count
+OFFICE_365,T1566,T1566.001,42
+OFFICE_365,T1114,T1114.003,3
+OKTA,T1110,T1110.003,17
+OKTA,T1078,,5
+OFFICE_365,T1086,,1
+OFFICE_365,not-an-id,,9

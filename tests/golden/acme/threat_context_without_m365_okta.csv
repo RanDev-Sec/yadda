@@ -1,0 +1,145 @@
+# software (ATT&CK): name,type,used_by,techniques in scope,out of scope,detected,first gaps
+Cobalt Strike,malware,APT29 (G0016)|FIN7 (G0046),71,2,3,T1003.001|T1001.003|T1005
+Mimikatz,tool,APT29 (G0016)|FIN7 (G0046),17,0,0,T1003.001|T1003.002|T1003.004
+AdFind,tool,APT29 (G0016)|FIN7 (G0046),5,0,0,T1016|T1018|T1069.002
+SUNBURST,malware,APT29 (G0016),36,0,1,T1001.001|T1001.002|T1001.003
+REvil,malware,FIN7 (G0046),35,0,2,T1566.001|T1007|T1012
+Lizar,malware,FIN7 (G0046),27,1,1,T1003.001|T1016|T1027
+PowerSploit,tool,FIN7 (G0046),28,0,3,T1003.001|T1005|T1012
+Sliver,tool,APT29 (G0016),23,0,1,T1003.001|T1001.002|T1016
+FoggyWeb,malware,APT29 (G0016),21,0,0,T1005|T1027.004|T1036
+Maze,malware,FIN7 (G0046),23,0,2,T1027|T1027.016|T1049
+FatDuke,malware,APT29 (G0016),21,0,1,T1005|T1008|T1012
+AADInternals,tool,APT29 (G0016),20,4,1,T1530|T1048|T1112
+CrackMapExec,tool,FIN7 (G0046),20,0,1,T1016|T1018|T1049
+SystemBC,malware,FIN7 (G0046),21,0,2,T1001|T1057|T1071.004
+Carbanak,malware,FIN7 (G0046),18,0,0,T1012|T1027|T1030
+CosmicDuke,malware,APT29 (G0016),19,0,2,T1005|T1020|T1071.001
+Sibot,malware,APT29 (G0016),18,0,1,T1012|T1016|T1027.010
+BoomBox,malware,APT29 (G0016),16,0,0,T1027|T1033|T1036
+GoldMax,malware,APT29 (G0016),17,1,1,T1001.001|T1016|T1027.002
+Net,tool,APT29 (G0016),16,0,0,T1007|T1018|T1021.002
+PowerDuke,malware,APT29 (G0016),15,0,0,T1010|T1016|T1033
+EnvyScout,malware,APT29 (G0016),14,0,0,T1566.001|T1005|T1036
+Pillowmint,malware,FIN7 (G0046),15,0,1,T1005|T1012|T1027
+WellMess,malware,APT29 (G0016),15,0,1,T1001.001|T1005|T1016
+LiteDuke,malware,APT29 (G0016),13,0,0,T1012|T1016|T1027.002
+SeaDuke,malware,APT29 (G0016),15,0,2,T1027.002|T1071.001|T1105
+SoreFang,malware,APT29 (G0016),14,0,1,T1016|T1027|T1057
+CozyCar,malware,APT29 (G0016),14,0,2,T1003.001|T1036.003|T1071.001
+SUNSPOT,malware,APT29 (G0016),12,0,0,T1027|T1036.005|T1057
+BloodHound,tool,APT29 (G0016),11,0,1,T1018|T1033|T1069.001
+Impacket,tool,APT29 (G0016),10,1,0,T1003.001|T1040|T1557.001
+PolyglotDuke,malware,APT29 (G0016),10,0,0,T1027|T1071.001|T1102.001
+MiniDuke,malware,APT29 (G0016),9,0,0,T1008|T1027|T1071.001
+WellMail,malware,APT29 (G0016),9,0,0,T1005|T1016|T1033
+reGeorg,malware,APT29 (G0016),9,1,0,T1090|T1021.002|T1059.006
+RegDuke,malware,APT29 (G0016),9,0,1,T1027|T1102.002|T1105
+POSHSPY,malware,APT29 (G0016),8,0,1,T1027|T1030|T1105
+PinchDuke,malware,APT29 (G0016),7,0,0,T1005|T1071.001|T1082
+Raindrop,malware,APT29 (G0016),7,0,0,T1027.002|T1036|T1036.005
+GRIFFON,malware,FIN7 (G0046),8,0,2,T1069.002|T1082|T1547.001
+GeminiDuke,malware,APT29 (G0016),6,0,0,T1007|T1016|T1057
+HAMMERTOSS,malware,APT29 (G0016),7,0,1,T1001.002|T1071.001|T1102.003
+NativeZone,malware,APT29 (G0016),6,0,0,T1036|T1140|T1204.002
+ROADTools,tool,APT29 (G0016),6,0,0,T1018|T1119|T1069.003
+SQLRat,malware,FIN7 (G0046),8,0,2,T1027.010|T1105|T1140
+BOOSTWRITE,malware,FIN7 (G0046),5,0,0,T1140|T1027.013|T1129
+HALFBAKED,malware,FIN7 (G0046),6,0,1,T1057|T1082|T1047
+JSS Loader,malware,FIN7 (G0046),7,0,2,T1566.001|T1105|T1059.005
+OnionDuke,malware,APT29 (G0016),5,0,0,T1071.001|T1102.003|T1140
+POWERSOURCE,malware,FIN7 (G0046),6,0,1,T1012|T1071.004|T1105
+QUIETEXIT,malware,APT29 (G0016),5,0,0,T1008|T1036.005|T1071
+TEARDROP,malware,APT29 (G0016),6,0,1,T1012|T1027|T1036.005
+TrailBlazer,malware,APT29 (G0016),5,0,0,T1001|T1001.001|T1036
+PsExec,tool,APT29 (G0016),5,0,1,T1021.002|T1569.002|T1136.002
+VaporRage,malware,APT29 (G0016),4,0,0,T1071.001|T1105|T1140
+CloudDuke,malware,APT29 (G0016),3,0,0,T1071.001|T1102.002|T1105
+GoldFinder,malware,APT29 (G0016),3,0,0,T1016.001|T1071.001|T1119
+RDFSNIFFER,malware,FIN7 (G0046),3,0,0,T1056.004|T1070.004|T1106
+Tasklist,tool,APT29 (G0016),3,0,0,T1007|T1057|T1518.001
+SDelete,tool,APT29 (G0016),2,0,0,T1070.004|T1485
+TEXTMATE,malware,FIN7 (G0046),2,0,0,T1071.004|T1059.003
+Tor,tool,APT29 (G0016),2,0,0,T1090.003|T1573.002
+Systeminfo,tool,APT29 (G0016),1,0,0,T1082
+ipconfig,tool,APT29 (G0016),1,0,0,T1016
+meek,tool,APT29 (G0016),1,0,0,T1090.004
+# campaigns
+SolarWinds Compromise,APT29 (G0016),67,4
+Operation Ghost,APT29 (G0016),5,0
+# procedures: 918
+T1001,buildable,SystemBC (S9001)
+T1001,buildable,TrailBlazer (S0682)
+T1001.001,buildable,GoldMax (S0588)
+T1001.001,buildable,SUNBURST (S0559)
+T1001.001,buildable,TrailBlazer (S0682)
+T1001.001,buildable,WellMess (S0514)
+T1001.002,buildable,HAMMERTOSS (S0037)
+T1001.002,buildable,SUNBURST (S0559)
+T1001.002,buildable,Sliver (S0633)
+T1001.003,buildable,Cobalt Strike (S0154)
+T1001.003,buildable,SUNBURST (S0559)
+T1003,thin,Carbanak (S0030)
+T1003,thin,OnionDuke (S0052)
+T1003,thin,PinchDuke (S0048)
+T1003.001,limited,Cobalt Strike (S0154)
+# flows: name,relevant_to,steps,actions,judged,covered,first_seen_step
+SolarWinds,APT29,18,33,32,4,9
+REvil,FIN7 (via REvil),19,25,25,1,10
+SWIFT Heist,,5,6,6,2,2
+Uber Breach,,7,7,6,2,2
+Gootloader,,30,36,35,11,6
+CISA Iranian APT,,22,22,22,5,2
+WhisperGate,,18,19,19,4,1
+Cobalt Kitty Campaign,,12,27,27,5,2
+FIN13 Case 2,,15,16,14,2,8
+Muddy Water,,10,22,22,3,7
+Maastricht University Ransomware,,18,18,16,2,16
+Ragnar Locker,,13,16,16,2,1
+FIN13 Case 1,,32,36,27,3,20
+Hancitor DLL,,20,22,21,2,12
+Conti CISA Alert,,6,13,11,1,2
+Shamoon,,19,23,23,2,13
+Black Basta Ransomware,,25,38,38,3,5
+ToolShell Vulnerability in Sharepoint,,7,14,14,1,3
+Ivanti Vulnerabilities,,18,18,15,1,2
+Conti Ransomware,,16,18,18,1,15
+NotPetya,,17,23,21,1,12
+MITRE NERVE,,8,24,23,1,4
+Turla - Carbon Emulation Plan,,69,79,71,3,20
+Turla - Snake Emulation Plan,,62,74,74,3,13
+CISA AA22-138B VMWare Workspace (Alt),,9,9,9,0,None
+CISA AA22-138B VMWare Workspace (TA1),,9,10,10,0,None
+CISA AA22-138B VMWare Workspace (TA2),,11,11,8,0,None
+Conti PWC,,4,5,4,0,None
+DFIR - BumbleBee Round 2,,13,19,19,0,None
+Equifax Breach (with Mitigations/Detections),,9,12,9,0,None
+JP Morgan Breach,,10,11,10,0,None
+Mac Malware Steals Crypto,,5,6,5,0,None
+Marriott Breach,,5,7,6,0,None
+OceanLotus,,21,23,20,0,None
+SearchAwesome Adware,,11,11,10,0,None
+Sony Malware,,13,14,14,0,None
+Target Breach,,15,15,13,0,None
+Tesla Kubernetes Breach,,4,9,7,0,None
+# inferred (TIE): threat,rank,technique,state
+APT29 (G0016),1,T1059.003,thin
+APT29 (G0016),2,T1071.001,buildable
+APT29 (G0016),3,T1059.005,thin
+APT29 (G0016),4,T1021.001,thin
+APT29 (G0016),5,T1003.001,limited
+APT29 (G0016),6,T1018,buildable
+APT29 (G0016),7,T1486,thin
+APT29 (G0016),8,T1059,buildable
+APT29 (G0016),9,T1685,detected
+APT29 (G0016),10,T1218.011,thin
+FIN7 (G0046),1,T1071.001,buildable
+FIN7 (G0046),2,T1070.004,thin
+FIN7 (G0046),3,T1016,buildable
+FIN7 (G0046),4,T1018,buildable
+FIN7 (G0046),5,T1003.001,limited
+FIN7 (G0046),6,T1685,detected
+FIN7 (G0046),7,T1083,buildable
+FIN7 (G0046),8,T1027,buildable
+FIN7 (G0046),9,T1041,thin
+FIN7 (G0046),10,T1112,buildable

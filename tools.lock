@@ -1,0 +1,10 @@
+# yadda tools.lock - upstream commits known to pass `yadda doctor`. Written by `yadda setup --latest`.
+# name  commit  # repository
+attack-flow 8b6ca28bc13beb871f3a4c5fa029b96c6394f874  # https://github.com/center-for-threat-informed-defense/attack-flow.git
+atomic-red-team 388942adbd9641f4dfdcf079d7efe9a75ec0ac43  # https://github.com/redcanaryco/atomic-red-team.git
+attack-stix-data 6cda5ad8462c79e14fbb872f4e09059b18e0cfc4  # https://github.com/mitre-attack/attack-stix-data.git
+detection-rules 234e9223c3b8f3d1c30209d9663797ba69057533  # https://github.com/chronicle/detection-rules.git
+misp-galaxy ede12c4a0362af03d51cdb31744206c040377628  # https://github.com/MISP/misp-galaxy.git
+sigma 8a4813404ea3074890e0cda9272d4d1a8b2941d6  # https://github.com/SigmaHQ/sigma.git
+summiting-the-pyramid 01037cbd7433f6adae3bb4c7ff3717fcc20ef2b1  # https://github.com/center-for-threat-informed-defense/summiting-the-pyramid.git
+technique-inference-engine a022f75ce3319ed9a075b0a8cded020dbaaf082d  # https://github.com/center-for-threat-informed-defense/technique-inference-engine.git

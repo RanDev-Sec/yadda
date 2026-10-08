@@ -1,0 +1,12 @@
+technique,rule,tags,state,noisy
+T1003.001,r02_lsass_access,1,firing,True
+T1053.005,r01_win_schtasks_create,1,firing,False
+T1059.001,r07_comment_and_negation,1,firing,False
+T1078,r12_login_then_exec,1,firing,False
+T1090,r03_portproxy,1,stale,False
+T1530,r13_o365_download,1,firing,True
+T1543.003,r04_service_list,1,firing,False
+T1556,r06_github_2fa_disabled,1,not in export,False
+T1566.001,r10_never_fired,1,never fired,False
+T1621,r05_okta_push_spam,1,fired, date unknown,False
+T1685,r09_revoked_tag,1,firing,False

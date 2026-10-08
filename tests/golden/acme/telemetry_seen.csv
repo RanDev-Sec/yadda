@@ -1,0 +1,5 @@
+platform,observed,log_types,routes,all,some,none,unseen,unknown,top_missing
+Identity Provider,True,OFFICE_365 OKTA +net: CISCO_ASA_FIREWALL,44,19,14,10,0,1,User Account Modification:6/10 | User Account Metadata:3/6 | Logon Session Metadata:3/3 | Active Directory Object Modification:2/2 | User Account Creation:1/3
+Office Suite,True,OFFICE_365 +net: CISCO_ASA_FIREWALL,55,10,20,23,0,2,Command Execution:7/12 | Logon Session Creation:5/10 | User Account Modification:4/4 | User Account Authentication:3/8 | File Modification:3/3
+SaaS,True,OFFICE_365 OKTA +net: CISCO_ASA_FIREWALL,58,11,7,17,22,1,Application Log Content[saas:slack]:2/4 | User Account Authentication[saas:googleworkspace]:2/4 | Application Log Content[saas:okta]:2/3 | Cloud Service Modification[m365:unified]:1/2 | Logon Session Metadata[m365:unified]:1/2
+Windows,True,WINDOWS_SYSMON WINEVTLOG +net: CISCO_ASA_FIREWALL,472,185,273,14,0,0,Module Load:59/101 | File Access:21/31 | File Metadata:17/30 | File Modification:10/26 | Application Log Content:9/29

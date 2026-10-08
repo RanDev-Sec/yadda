@@ -1,0 +1,11 @@
+title: r05_okta_push_spam [$l]
+tags:
+- attack.t1621
+logsource:
+  product: okta
+  category: user_account_authentication
+detection:
+  selection:
+    security_result.action:
+    - x
+  condition: selection

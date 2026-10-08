@@ -1,0 +1,12 @@
+technique,implementations_matched,implementations_total,implementation_coverage,best_robustness,precision_of_best,rules,scored_rules,calculator
+T1003.001,1,1,1.0,1,4,r02_lsass_access,1,<DCC-VERSION>
+T1053.005,7,8,0.875,1,2,r01_win_schtasks_create,1,<DCC-VERSION>
+T1059.001,4,4,1.0,2,2,r07_comment_and_negation,1,<DCC-VERSION>
+T1078,1,1,1.0,1,1,r12_login_then_exec,1,<DCC-VERSION>
+T1090,1,1,1.0,3,3,r03_portproxy,1,<DCC-VERSION>
+T1530,0,5,0.0,,,r13_o365_download,0,<DCC-VERSION>
+T1543.003,0,5,0.0,,,r04_service_list,0,<DCC-VERSION>
+T1556,1,1,1.0,,,r06_github_2fa_disabled,0,<DCC-VERSION>
+T1566.001,0,1,0.0,3,3,r10_never_fired,1,<DCC-VERSION>
+T1621,3,3,1.0,,,r05_okta_push_spam,0,<DCC-VERSION>
+T1685,1,6,0.167,,,r09_revoked_tag,0,<DCC-VERSION>

@@ -1,0 +1,178 @@
+udm_event_type,data_component,note,log_type,product_event_type
+PROCESS_LAUNCH,Process Creation,,,
+PROCESS_LAUNCH,Command Execution,command line carried on the launch event,,
+PROCESS_TERMINATION,Process Termination,,,
+PROCESS_OPEN,Process Access,,,
+PROCESS_INJECTION,Process Modification,,,
+PROCESS_MODULE_LOAD,Module Load,,,
+FILE_CREATION,File Creation,,,
+FILE_MODIFICATION,File Modification,,,
+FILE_DELETION,File Deletion,,,
+FILE_READ,File Access,,,
+FILE_OPEN,File Access,,,
+REGISTRY_CREATION,Windows Registry Key Creation,,,
+REGISTRY_MODIFICATION,Windows Registry Key Modification,,,
+REGISTRY_DELETION,Windows Registry Key Modification,ATT&CK has no deletion component,,
+NETWORK_CONNECTION,Network Connection Creation,,,
+NETWORK_FLOW,Network Traffic Flow,,,
+NETWORK_CONNECTION,Network Traffic Flow,"firewall / flow session records are summarised traffic (ATT&CK: e.g. NetFlow, Zeek)",.*FIREWALL.*|PAN_.*|CHECKPOINT.*|FORTINET.*|SONICWALL.*|WATCHGUARD.*|AWS_VPC_FLOW|AZURE_NSG_FLOW|GCP_VPC_FLOW|BRO_JSON|ZEEK.*|NETFLOW.*,
+NETWORK_DNS,Network Traffic Content,DNS content only - partial,,
+NETWORK_HTTP,Network Traffic Content,HTTP content only - partial,,
+USER_LOGIN,Logon Session Creation,,,
+USER_LOGIN,User Account Authentication,,,
+USER_CREATION,User Account Creation,,,
+USER_DELETION,User Account Deletion,,,
+USER_CHANGE_PASSWORD,User Account Modification,,,
+USER_CHANGE_PERMISSIONS,User Account Modification,,,
+GROUP_MODIFICATION,Group Modification,,,
+SCHEDULED_TASK_CREATION,Scheduled Job Creation,,,
+SCHEDULED_TASK_MODIFICATION,Scheduled Job Modification,,,
+SERVICE_CREATION,Service Creation,,,
+SERVICE_MODIFICATION,Service Modification,,,
+SETTING_MODIFICATION,Host Status,approximate,,
+STATUS_STARTUP,Host Status,,,
+STATUS_SHUTDOWN,Host Status,,,
+EMAIL_TRANSACTION,Application Log Content,mail flow,,
+USER_RESOURCE_ACCESS,Cloud Service Metadata,approximate - verify per log type,,
+RESOURCE_PERMISSIONS_CHANGE,Cloud Service Modification,approximate,,
+SERVICE_START,Service Metadata,,,
+SERVICE_STOP,Service Metadata,,,
+SERVICE_UNSPECIFIED,Service Metadata,,,
+GROUP_CREATION,Group Modification,,,
+GROUP_DELETION,Group Modification,,,
+GROUP_UNCATEGORIZED,Group Metadata,approximate,,
+SCHEDULED_TASK_ENABLE,Scheduled Job Modification,,,
+SCHEDULED_TASK_DISABLE,Scheduled Job Modification,,,
+SCHEDULED_TASK_DELETION,Scheduled Job Modification,,,
+FILE_COPY,File Creation,,,
+FILE_MOVE,File Modification,,,
+USER_LOGOUT,Logon Session Metadata,,,
+EMAIL_UNCATEGORIZED,Application Log Content,mail,,
+RESOURCE_READ,Cloud Storage Access,approximate - cloud/SaaS resources,,
+RESOURCE_WRITTEN,Cloud Storage Modification,approximate - cloud/SaaS resources,,
+USER_RESOURCE_CREATION,Cloud Storage Creation,approximate - SaaS files (SharePoint/OneDrive etc),,
+USER_RESOURCE_DELETION,Cloud Storage Deletion,approximate - SaaS files,,
+USER_RESOURCE_UPDATE_CONTENT,Cloud Storage Modification,approximate - SaaS files,,
+USER_RESOURCE_UPDATE_PERMISSIONS,Cloud Service Modification,approximate - sharing/permission changes,,
+*,Script Execution,PowerShell script block logging,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(4104)(\D.*)?
+*,Command Execution,PowerShell module logging,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(4103)(\D.*)?
+*,Active Directory Object Modification,directory service object modified,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(5136)(\D.*)?
+*,Active Directory Object Creation,directory service object created,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(5137)(\D.*)?
+*,Active Directory Object Deletion,directory service object deleted,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(5141)(\D.*)?
+*,Active Directory Object Access,operation performed on an AD object,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(4662)(\D.*)?
+*,Active Directory Credential Request,Kerberos TGT/TGS requests (ATT&CK lists 4768/4769),WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(4768|4769|4771)(\D.*)?
+*,Firewall Rule Modification,Windows Firewall rule added/modified/deleted,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(4946|4947|4948)(\D.*)?
+*,Firewall Disable,approximate - Windows Firewall setting changed,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(4950)(\D.*)?
+*,Network Share Access,network share accessed,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(5140|5145)(\D.*)?
+*,File Access,approximate - object access (file or registry),WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(4663)(\D.*)?
+*,Windows Registry Key Access,approximate - handle/object access incl. registry,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(4656|4663)(\D.*)?
+*,Group Enumeration,local group membership enumerated,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(4799)(\D.*)?
+*,User Account Metadata,approximate - user's local groups enumerated,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(4798)(\D.*)?
+*,Scheduled Job Modification,scheduled task deleted/updated,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(4699|4702)(\D.*)?
+*,Drive Creation,approximate - new external device recognized,WINEVTLOG.*|WINDOWS.*|POWERSHELL.*,(6416)(\D.*)?
+*,Driver Load,Sysmon 6 driver loaded,WINDOWS_SYSMON|SYSMON.*,(6)(\D.*)?
+*,Process Modification,Sysmon 8 CreateRemoteThread / 25 process tampering,WINDOWS_SYSMON|SYSMON.*,(8|25)(\D.*)?
+*,Drive Access,Sysmon 9 raw disk access,WINDOWS_SYSMON|SYSMON.*,(9)(\D.*)?
+*,File Metadata,Sysmon 2 file time changed / 15 alternate data stream,WINDOWS_SYSMON|SYSMON.*,(2|15)(\D.*)?
+*,Named Pipe Metadata,Sysmon 17/18 pipe created/connected,WINDOWS_SYSMON|SYSMON.*,(17|18)(\D.*)?
+*,WMI Creation,Sysmon 19-21 WMI event filter/consumer/binding,WINDOWS_SYSMON|SYSMON.*,(19|20|21)(\D.*)?
+*,Instance Creation,verify product_event_type is the CloudTrail eventName in your tenant,AWS_CLOUDTRAIL,RunInstances
+*,Instance Start,,AWS_CLOUDTRAIL,StartInstances
+*,Instance Stop,,AWS_CLOUDTRAIL,StopInstances
+*,Instance Deletion,,AWS_CLOUDTRAIL,TerminateInstances
+*,Instance Modification,,AWS_CLOUDTRAIL,ModifyInstanceAttribute
+*,Instance Enumeration,,AWS_CLOUDTRAIL,DescribeInstances
+*,Instance Metadata,approximate,AWS_CLOUDTRAIL,DescribeInstanceAttribute
+*,Snapshot Creation,,AWS_CLOUDTRAIL,CreateSnapshot
+*,Snapshot Deletion,,AWS_CLOUDTRAIL,DeleteSnapshot
+*,Snapshot Modification,,AWS_CLOUDTRAIL,ModifySnapshotAttribute
+*,Snapshot Metadata,approximate,AWS_CLOUDTRAIL,DescribeSnapshotAttribute
+*,Volume Creation,,AWS_CLOUDTRAIL,CreateVolume
+*,Volume Deletion,,AWS_CLOUDTRAIL,DeleteVolume
+*,Volume Modification,,AWS_CLOUDTRAIL,ModifyVolume|AttachVolume|DetachVolume
+*,Image Creation,,AWS_CLOUDTRAIL,CreateImage|RegisterImage|CopyImage
+*,Image Modification,,AWS_CLOUDTRAIL,ModifyImageAttribute
+*,Image Metadata,approximate,AWS_CLOUDTRAIL,DescribeImages|DescribeImageAttribute
+*,Cloud Storage Enumeration,,AWS_CLOUDTRAIL,ListBuckets
+*,Cloud Storage Access,requires S3 data events,AWS_CLOUDTRAIL,GetObject
+*,Cloud Storage Modification,,AWS_CLOUDTRAIL,PutObject|PutBucketPolicy|PutBucketAcl
+*,Cloud Storage Creation,,AWS_CLOUDTRAIL,CreateBucket
+*,Cloud Storage Deletion,,AWS_CLOUDTRAIL,DeleteBucket|DeleteObject
+*,Cloud Storage Metadata,approximate,AWS_CLOUDTRAIL,GetBucketPolicy|GetBucketAcl|HeadObject
+*,Cloud Service Disable,,AWS_CLOUDTRAIL,StopLogging|DeleteTrail|DeleteDetector|DisableSecurityHub
+*,Cloud Service Modification,,AWS_CLOUDTRAIL,UpdateTrail|PutEventSelectors|UpdateDetector
+*,Cloud Service Enumeration,approximate - any Describe*/List* call,AWS_CLOUDTRAIL,(Describe|List)[A-Za-z]+
+*,Firewall Rule Modification,security groups,AWS_CLOUDTRAIL,(Authorize|Revoke)SecurityGroup(Ingress|Egress)|CreateSecurityGroup|DeleteSecurityGroup
+*,Instance Creation,verify product_event_type is the audit methodName in your tenant,GCP_CLOUDAUDIT,.*compute\.instances\.insert
+*,Instance Start,,GCP_CLOUDAUDIT,.*compute\.instances\.start
+*,Instance Stop,,GCP_CLOUDAUDIT,.*compute\.instances\.stop
+*,Instance Deletion,,GCP_CLOUDAUDIT,.*compute\.instances\.delete
+*,Instance Modification,,GCP_CLOUDAUDIT,.*compute\.instances\.set[A-Za-z]+
+*,Instance Enumeration,,GCP_CLOUDAUDIT,.*compute\.instances\.(list|aggregatedList)
+*,Snapshot Creation,,GCP_CLOUDAUDIT,.*compute\.snapshots\.insert
+*,Snapshot Deletion,,GCP_CLOUDAUDIT,.*compute\.snapshots\.delete
+*,Volume Creation,,GCP_CLOUDAUDIT,.*compute\.disks\.insert
+*,Volume Deletion,,GCP_CLOUDAUDIT,.*compute\.disks\.delete
+*,Image Creation,,GCP_CLOUDAUDIT,.*compute\.images\.insert
+*,Firewall Rule Modification,,GCP_CLOUDAUDIT,.*compute\.firewalls\.(insert|patch|update|delete)
+*,Cloud Storage Enumeration,,GCP_CLOUDAUDIT,storage\.buckets\.list
+*,Cloud Storage Access,requires data access logs,GCP_CLOUDAUDIT,storage\.objects\.get
+*,Pod Creation,GKE audit,GCP_CLOUDAUDIT,io\.k8s\.core\.v1\.pods\.create
+*,Pod Enumeration,GKE audit,GCP_CLOUDAUDIT,io\.k8s\.core\.v1\.pods\.list
+*,Instance Creation,approximate - create or update; verify operationName in your tenant,AZURE_ACTIVITY,MICROSOFT\.COMPUTE/VIRTUALMACHINES/WRITE
+*,Instance Start,,AZURE_ACTIVITY,MICROSOFT\.COMPUTE/VIRTUALMACHINES/START/ACTION
+*,Instance Stop,,AZURE_ACTIVITY,MICROSOFT\.COMPUTE/VIRTUALMACHINES/(POWEROFF|DEALLOCATE)/ACTION
+*,Instance Deletion,,AZURE_ACTIVITY,MICROSOFT\.COMPUTE/VIRTUALMACHINES/DELETE
+*,Snapshot Creation,,AZURE_ACTIVITY,MICROSOFT\.COMPUTE/SNAPSHOTS/WRITE
+*,Snapshot Deletion,,AZURE_ACTIVITY,MICROSOFT\.COMPUTE/SNAPSHOTS/DELETE
+*,Volume Creation,,AZURE_ACTIVITY,MICROSOFT\.COMPUTE/DISKS/WRITE
+*,Volume Deletion,,AZURE_ACTIVITY,MICROSOFT\.COMPUTE/DISKS/DELETE
+*,Firewall Rule Modification,NSG rules,AZURE_ACTIVITY,MICROSOFT\.NETWORK/NETWORKSECURITYGROUPS/SECURITYRULES/(WRITE|DELETE)
+*,Snapshot Enumeration,,AWS_CLOUDTRAIL,DescribeSnapshots
+*,Volume Enumeration,,AWS_CLOUDTRAIL,DescribeVolumes
+*,Volume Metadata,,AWS_CLOUDTRAIL,DescribeVolumeAttribute
+*,Image Deletion,,AWS_CLOUDTRAIL,DeregisterImage
+*,Firewall Enumeration,,AWS_CLOUDTRAIL,DescribeSecurityGroups|DescribeSecurityGroupRules
+*,Image Deletion,,GCP_CLOUDAUDIT,.*compute\.images\.delete
+*,Firewall Enumeration,,GCP_CLOUDAUDIT,.*compute\.firewalls\.list
+*,Snapshot Enumeration,,GCP_CLOUDAUDIT,.*compute\.snapshots\.list
+*,Volume Enumeration,,GCP_CLOUDAUDIT,.*compute\.disks\.(list|aggregatedList)
+*,Application Log Content,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 16 Application Log Content; 255 Application Log Content,WINDOWS_SYSMON|SYSMON.*,(16|255)(\D.*)?
+*,File Access,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 9 File Access,WINDOWS_SYSMON|SYSMON.*,(9)(\D.*)?
+*,File Creation,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 11 File Creation; 15 File Creation,WINDOWS_SYSMON|SYSMON.*,(11|15)(\D.*)?
+*,File Deletion,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 23 File Deletion; 26 File Deletion Logged,WINDOWS_SYSMON|SYSMON.*,(23|26)(\D.*)?
+*,File Metadata,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 28 File Block Shredding,WINDOWS_SYSMON|SYSMON.*,(28)(\D.*)?
+*,File Modification,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 2 File Modification; 27 File Block Executable; 29 File Executable Deleted,WINDOWS_SYSMON|SYSMON.*,(2|27|29)(\D.*)?
+*,Module Load,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 7 Module Load,WINDOWS_SYSMON|SYSMON.*,(7)(\D.*)?
+*,Network Connection Creation,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 3 Network Connection Creation,WINDOWS_SYSMON|SYSMON.*,(3)(\D.*)?
+*,Process Access,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 10 Process Access,WINDOWS_SYSMON|SYSMON.*,(10)(\D.*)?
+*,Process Creation,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 1 Process Creation,WINDOWS_SYSMON|SYSMON.*,(1)(\D.*)?
+*,Process Termination,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 5 Process Termination,WINDOWS_SYSMON|SYSMON.*,(5)(\D.*)?
+*,Service Metadata,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4 Service Metadata,WINDOWS_SYSMON|SYSMON.*,(4)(\D.*)?
+*,Windows Registry Key Creation,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 12 Windows Registry Key Deletion,WINDOWS_SYSMON|SYSMON.*,(12)(\D.*)?
+*,Windows Registry Key Modification,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 13 Windows Registry Key Modification; 14 Windows Registry Key Modification,WINDOWS_SYSMON|SYSMON.*,(13|14)(\D.*)?
+*,Active Directory Object Access,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4932 Synchronization of a replica of an Activ,WINEVTLOG.*|POWERSHELL.*,(4932)(\D.*)?
+*,Active Directory Object Creation,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 5138 A directory service object was undeleted,WINEVTLOG.*|POWERSHELL.*,(5138)(\D.*)?
+*,Active Directory Object Modification,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4719 System audit policy was changed.; 4737 A security-enabled global group was chan; 4770 A Kerberos service ticket was renewed; 5139 A directory service object was moved.,WINEVTLOG.*|POWERSHELL.*,(4719|4737|4770|5139)(\D.*)?
+*,File Access,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4661 A handle to an object was requested.; 4690 An attempt was made to duplicate a handl,WINEVTLOG.*|POWERSHELL.*,(4661|4690)(\D.*)?
+*,File Metadata,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4664 An attempt was made to create a hard lin,WINEVTLOG.*|POWERSHELL.*,(4664)(\D.*)?
+*,Firewall Metadata,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4950 A windows firewall setting has changed,WINEVTLOG.*|POWERSHELL.*,(4950)(\D.*)?
+*,Group Enumeration,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4798 A user's local group membership was enum,WINEVTLOG.*|POWERSHELL.*,(4798)(\D.*)?
+*,Group Modification,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4729 A member was removed from a security-ena; 4732 A member was added to a security-enabled; 4733 A member was removed from a security-ena; 4735 A security-enabled local group was,WINEVTLOG.*|POWERSHELL.*,(4729|4732|4733|4735|4755|4756|4757|4764)(\D.*)?
+*,Host Status,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4616 The system time was changed.,WINEVTLOG.*|POWERSHELL.*,(4616)(\D.*)?
+*,Logon Session Creation,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4624 An account was successfully logged on.; 4778 A session was reconnected to a Window St; 4964 Special groups have been assigned to a n,WINEVTLOG.*|POWERSHELL.*,(4624|4778|4964)(\D.*)?
+*,Logon Session Metadata,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4610 An authentication package has been loade; 4611 A trusted logon process has been registe; 4614 A notification package has been loaded b; 4622 A security package has been loaded,WINEVTLOG.*|POWERSHELL.*,(4610|4611|4614|4622|4634|4647|4673)(\D.*)?
+*,Network Connection Creation,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 5031 The Windows Firewall Service blocked an ; 5154 The Windows Filtering Platform has permi; 5155 The Windows Filtering Platform has block; 5156 The Windows Filtering Platform has,WINEVTLOG.*|POWERSHELL.*,(5031|5154|5155|5156|5157|5158|5159)(\D.*)?
+*,Process Creation,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4688 A new process has been created; 4696 A primary token was assigned to process.,WINEVTLOG.*|POWERSHELL.*,(4688|4696)(\D.*)?
+*,Process Termination,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4689 A process has exited.,WINEVTLOG.*|POWERSHELL.*,(4689)(\D.*)?
+*,Scheduled Job Creation,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4698 A scheduled task was created.,WINEVTLOG.*|POWERSHELL.*,(4698)(\D.*)?
+*,Scheduled Job Modification,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4700 A scheduled task was disabled; 4701 A scheduled task was disabled,WINEVTLOG.*|POWERSHELL.*,(4700|4701)(\D.*)?
+*,Script Execution,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4103 A PowerShell pipeline execution detail w,WINEVTLOG.*|POWERSHELL.*,(4103)(\D.*)?
+*,Service Creation,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4697 A service was installed in the system.,WINEVTLOG.*|POWERSHELL.*,(4697)(\D.*)?
+*,User Account Authentication,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4625 An account failed to log on.; 4648 A logon was attempted using explicit cre; 4776 The computer attempted to validate the c,WINEVTLOG.*|POWERSHELL.*,(4625|4648|4776)(\D.*)?
+*,User Account Creation,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4720 A user account was created.; 4741 A computer account was created.,WINEVTLOG.*|POWERSHELL.*,(4720|4741)(\D.*)?
+*,User Account Deletion,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4726 A user account was deleted.; 4743 A computer account was deleted.,WINEVTLOG.*|POWERSHELL.*,(4726|4743)(\D.*)?
+*,User Account Metadata,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4674 An operation was attempted on a privileg,WINEVTLOG.*|POWERSHELL.*,(4674)(\D.*)?
+*,User Account Modification,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4703 A user right was adjusted.; 4717 System security access was granted to an; 4718 System security access was removed from ; 4722 A user account was enabled.; 4723 An attempt was,WINEVTLOG.*|POWERSHELL.*,(4703|4717|4718|4722|4723|4724|4725|4738|4740|4742|4767|4781)(\D.*)?
+*,Windows Registry Key Deletion,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4660 An object was deleted.,WINEVTLOG.*|POWERSHELL.*,(4660)(\D.*)?
+*,Windows Registry Key Modification,MITRE DCC mappings.xlsx (01037cb 2026-09-29): 4657 A registry value was modified.; 4670 A permissions on an object were changed.,WINEVTLOG.*|POWERSHELL.*,(4657|4670)(\D.*)?

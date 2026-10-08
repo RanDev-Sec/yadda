@@ -1,0 +1,9 @@
+exit=0
+acmetest: 12 enabled rules -> 16 shadow Sigma files; running MITRE Detection Coverage Calculator (<DCC-VERSION>) ...
+  rules: 5 fully scored, 2 partly scored, 1 not scorable (event or fields not in the calculator), 4 non-Windows (implementation coverage only)
+  robustness (1 = ephemeral value ... 5 = core to the technique): 1: 3 rules, 2: 2 rules, 3: 2 rules
+  techniques: 11 of 11 tagged techniques are in MITRE's implementation catalogue
+  UDM fields the calculator has no field for (add to shared/udm_to_ocsf.csv if one exists): target.application (1), target.process.command_line (1)
+  -> <ROOT>/environments/acmetest/robustness_rules.csv
+  -> <ROOT>/environments/acmetest/robustness_techniques.csv
+  -> calculator workbook: <ROOT>/environments/acmetest/robustness/dcc_results.xlsx

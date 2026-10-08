@@ -1,0 +1,14 @@
+rule r06_github_2fa_disabled {
+  meta:
+    author = "yadda test fixture"
+    description = "GitHub org 2FA requirement disabled (no event type, only product event)"
+    mitre_attack_technique = "T1556"
+    severity = "High"
+
+  events:
+    $g.metadata.log_type = "GITHUB"
+    $g.metadata.product_event_type = "org.disable_two_factor_requirement"
+
+  condition:
+    $g
+}

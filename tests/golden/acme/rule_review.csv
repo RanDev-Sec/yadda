@@ -1,0 +1,11 @@
+rule,priority,reasons,decision,notes,reviewed_on,techniques,last_fired,detections,not_malicious_pct,event_types,log_types_named,log_types_observed
+r02_lsass_access,high,noisy: 95% of 40 closed cases not malicious; easy to evade (MITRE robustness 1): keys on SourceImage (exclusion),,,,T1003.001,<DATE>,900,95,PROCESS_OPEN,,
+r06_github_2fa_disabled,high,"cannot fire: filters on log type GITHUB, not received; no evidence (not in rule health export)",,,,T1556,,,,,GITHUB,
+r09_revoked_tag,high,"cannot fire: needs event type SERVICE_MODIFICATION, not received; outdated ATT&CK ID T1562.001 (MITRE replaced it)",,,,T1685,<DATE>,3,,SERVICE_MODIFICATION,,
+r13_o365_download,high,noisy: 83% of 6 closed cases not malicious,,,,T1530,<DATE>,9,83,USER_RESOURCE_ACCESS,OFFICE_365,OFFICE_365
+r03_portproxy,medium,stale: last fired <DATE>,,,,T1090,<DATE>,4,,"PROCESS_LAUNCH, REGISTRY_CREATION, REGISTRY_MODIFICATION",,
+r08_untagged,medium,no usable ATT&CK tag (invisible in coverage),,,,,<DATE>,12,,NETWORK_DNS,,WINDOWS_SYSMON
+r10_never_fired,medium,never fired,,,,T1566.001,,0,,FILE_CREATION,,
+r01_win_schtasks_create,low,easy to evade (MITRE robustness 1): keys on Image (match),,,,T1053.005,<DATE>,120,10,PROCESS_LAUNCH,,"WINDOWS_SYSMON, WINEVTLOG"
+r05_okta_push_spam,low,777 detections but the export has no detection time - re-export with detection_time,,,,T1621,,777,,USER_LOGIN,OKTA,
+r12_login_then_exec,low,easy to evade (MITRE robustness 1): keys on Image (match),,,,T1078,<DATE>,21,,"PROCESS_LAUNCH, USER_LOGIN",,

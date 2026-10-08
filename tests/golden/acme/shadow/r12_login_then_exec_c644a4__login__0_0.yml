@@ -1,0 +1,11 @@
+title: r12_login_then_exec [$login]
+tags:
+- attack.t1078
+logsource:
+  product: unknown
+  category: logon_session_creation
+detection:
+  selection:
+    extensions.auth.mechanism:
+    - x
+  condition: selection

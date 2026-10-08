@@ -1,0 +1,23 @@
+rule r02_lsass_access {
+  meta:
+    author = "yadda test fixture"
+    description = "LSASS opened with dump rights; NOT group contains a bracket inside a string"
+    mitre_attack_technique = "T1003.001"
+    severity = "High"
+
+  events:
+    $p.metadata.event_type = "PROCESS_OPEN"
+    re.regex($p.target.process.file.full_path, `\\lsass\.exe$`) nocase
+    (
+        $p.target.resource.name = "0x1010" or
+        $p.target.resource.name = "0x1410"
+    )
+    NOT (
+        strings.contains($p.additional.fields["CallTrace"], "|UNKNOWN(") and
+        $p.target.resource.name = "0x103800"
+    )
+    NOT re.regex($p.principal.process.file.full_path, `\\Sysmon64\.exe$`) nocase
+
+  condition:
+    $p
+}

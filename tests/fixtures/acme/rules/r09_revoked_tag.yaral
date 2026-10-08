@@ -1,0 +1,14 @@
+rule r09_revoked_tag {
+  meta:
+    author = "yadda test fixture"
+    description = "tagged with a revoked technique ID (T1562.001 -> T1685)"
+    mitre_attack_technique = "T1562.001"
+    severity = "Medium"
+
+  events:
+    $e.metadata.event_type = "SERVICE_MODIFICATION"
+    $e.target.application = /WinDefend/ nocase
+
+  condition:
+    $e
+}

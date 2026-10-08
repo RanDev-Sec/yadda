@@ -1,0 +1,19 @@
+rule r13_o365_download {
+  meta:
+    author = "yadda test fixture"
+    description = "bulk SharePoint/OneDrive download (cloud rule)"
+    mitre_attack_technique = "T1530"
+    severity = "Medium"
+
+  events:
+    $d.metadata.event_type = "USER_RESOURCE_ACCESS"
+    $d.metadata.log_type = "OFFICE_365"
+    $d.metadata.product_event_type = "FileDownloaded"
+    $d.principal.user.userid = $user
+
+  match:
+    $user over 1h
+
+  condition:
+    #d > 50
+}

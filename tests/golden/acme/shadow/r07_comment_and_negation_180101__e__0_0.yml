@@ -1,0 +1,11 @@
+title: r07_comment_and_negation [$e]
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1059.001
+detection:
+  selection_1:
+    CommandLine|re:
+    - '-enc(odedcommand)? '
+  condition: selection_1

@@ -1,0 +1,11 @@
+title: r03_portproxy [$x]
+logsource:
+  product: windows
+  category: registry_set
+tags:
+- attack.t1090
+detection:
+  selection_1:
+    TargetObject:
+    - HKLM\\System\\CurrentControlSet\\Services\\PortProxy\\v4tov4
+  condition: selection_1

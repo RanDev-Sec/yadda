@@ -1,0 +1,13 @@
+rule,state,working,sole_techniques,true_positives,cases,not_malicious_pct,detections,unique_data_paths,prevalence,techniques,tuning,robustness,robustness_status
+r01_win_schtasks_create,firing,True,T1053.005,9,10,10,120,Process Creation,66,T1053.005,,1,scored
+r07_comment_and_negation,firing,True,T1059.001,0,0,,33,Command Execution | Process Creation,102,T1059.001,,2,scored (partial)
+r12_login_then_exec,firing,True,T1078,0,0,,21,User Account Authentication,58,T1078,,1,scored (partial)
+r04_service_list,firing,True,T1543.003,0,0,,7,Service Creation,31,T1543.003,,,not scored
+r09_revoked_tag,firing,True,T1685,0,0,,3,,41,T1685,,,implementations only (not Windows)
+r02_lsass_access,firing,False,T1003.001,2,40,95,900,Process Access,53,T1003.001,noisy: 95% of 40 closed cases not malicious,1,scored
+r13_o365_download,firing,False,T1530,1,6,83,9,,8,T1530,noisy: 83% of 6 closed cases not malicious,,implementations only (not Windows)
+r10_never_fired,never fired,False,T1566.001,0,0,,0,File Creation,88,T1566.001,,3,scored
+r03_portproxy,stale,False,T1090,0,0,,4,Process Creation,29,T1090,,3,scored
+r05_okta_push_spam,"fired, date unknown",False,T1621,0,0,,777,User Account Authentication,4,T1621,,,implementations only (not Windows)
+r06_github_2fa_disabled,not in export,False,T1556,0,0,,,,2,T1556,,,implementations only (not Windows)
+r08_untagged,firing,True,,0,0,,12,,0,,,2,scored

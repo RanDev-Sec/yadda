@@ -1,0 +1,33 @@
+exit=0
+acmetest: running into <ROOT>/output/acmetest/<DATE>
+  skip   pull
+  ok     sync            <T>s  re-read the rules in rules/
+  skip   queries
+  ok     data            <T>s  acmetest: 14 data components from 5 log types
+  ok     evidence        <T>s  acmetest: 11 enabled tagged rules - healthy 5, noisy 2, never/not recently fired or missing 4  (window 90 days, noisy = >50% not ma
+  ok     robustness      <T>s  acmetest: 12 enabled rules -> 16 shadow Sigma files; running MITRE Detection Coverage Calculator (<DCC-VERSION>) ...
+  ok     review          <T>s  acmetest: 10 rules to review - high 4, medium 3, low 3  (0 already have a decision)
+  ok     atomics         <T>s  acmetest: 11 techniques, 110 new ART tests added to <ROOT>/environments/acmetest/validation.csv (110 no
+  skip   sigma
+  ok     dashboard       <T>s  1_acmetest_dashboard.html
+  ok     workbook        <T>s  2_acmetest_coverage.xlsx
+
+acmetest: 502 ATT&CK Enterprise techniques in scope (Identity Provider, Office Suite, SaaS, Windows)
+  Identity Provider  seen               routes: 19 all inputs, 14 some, 10 none, 0 product not seen
+  Office Suite       seen               routes: 10 all inputs, 20 some, 23 none, 0 product not seen
+  SaaS               seen               routes: 11 all inputs, 7 some, 17 none, 22 product not seen
+  Windows            seen               routes: 185 all inputs, 273 some, 14 none, 0 product not seen
+  detected by SIEM rules 5 (validated 0)
+  limited 2, unverified 4, data-no-rule 196, some data 273 (192 one input short), no data seen 15, platform not seen 4, can't tell 3
+  security products in SecOps detected 5 in-scope techniques (3 with no SIEM detection) - shown separately, not counted
+  NOTE: UNUSED_APP: 5,000 events (GENERIC_EVENT). Not placed on an ATT&CK platform, so it counts for nothing. Place it with: yadda run acmetest --ask
+  next:
+   - Enable 'Module Load' for Windows: WINDOWS_SYSMON event 7 (59 techniques)
+   - Enable 'File Access' for Windows: WINEVTLOG event 4663, WINDOWS_SYSMON event 9, WINEVTLOG event 4661/4690 (21 techniques)
+   - Fix rule r02_lsass_access
+   - Write a rule for T1105 Ingress Tool Transfer
+   - Test T1059.001 PowerShell with Atomic Red Team
+
+open: <ROOT>/output/acmetest/<DATE>/1_acmetest_dashboard.html
+      <ROOT>/output/acmetest/<DATE>/2_acmetest_coverage.xlsx
+(also copied to <ROOT>/output/acmetest/latest; details of every step in run_log.txt)

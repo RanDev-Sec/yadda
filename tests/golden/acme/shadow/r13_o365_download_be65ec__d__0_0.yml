@@ -1,0 +1,10 @@
+title: r13_o365_download [$d]
+tags:
+- attack.t1530
+logsource:
+  product: office_365
+  category: cloud_service_metadata
+detection:
+  selection:
+    _none: x
+  condition: selection

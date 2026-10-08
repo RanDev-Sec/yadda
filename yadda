@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# yadda - detection engineering commands, for macOS and Linux (Windows: yadda.cmd). Run "./yadda help".
+# Put this folder on your PATH, or call it as ./yadda from here.
+set -e
+SOURCE="${BASH_SOURCE[0]}"
+while [ -L "$SOURCE" ]; do                 # follow symlinks (e.g. a link in ~/bin) to the real folder
+  DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  case "$SOURCE" in /*) ;; *) SOURCE="$DIR/$SOURCE" ;; esac
+done
+YADDA_HOME="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+PY="$YADDA_HOME/.venv/bin/python"
+
+if [ "$1" = "go" ]; then
+  # A script can't change the directory of the shell that runs it: print the path to cd to.
+  if [ -n "$2" ]; then echo "$YADDA_HOME/environments/$2"; else echo "$YADDA_HOME"; fi
+  exit 0
+fi
+
+if [ ! -x "$PY" ]; then
+  if [ "$1" != "setup" ]; then
+    echo "yadda: not set up yet - run: ./yadda setup" >&2
+    exit 1
+  fi
+  echo "Creating Python 3.12 environment ..."
+  # Python 3.12: newer versions break the packages Google's Content Manager pins.
+  if command -v uv >/dev/null 2>&1; then
+    uv venv --seed -p 3.12 "$YADDA_HOME/.venv"
+  elif command -v python3.12 >/dev/null 2>&1; then
+    python3.12 -m venv "$YADDA_HOME/.venv"
+  else
+    echo "yadda: Python 3.12 is needed. Install uv (it fetches its own Python 3.12) and run ./yadda setup again:" >&2
+    echo "      curl -LsSf https://astral.sh/uv/install.sh | sh      (or: brew install uv)" >&2
+    echo "    or install python3.12 from your package manager / python.org." >&2
+    exit 1
+  fi
+fi
+exec "$PY" "$YADDA_HOME/yadda.py" "$@"

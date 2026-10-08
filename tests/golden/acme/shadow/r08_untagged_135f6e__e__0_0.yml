@@ -1,0 +1,10 @@
+title: r08_untagged [$e]
+logsource:
+  product: windows
+  category: dns_query
+tags: []
+detection:
+  selection_1:
+    QueryName:
+    - example.invalid
+  condition: selection_1

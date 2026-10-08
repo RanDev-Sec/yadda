@@ -1,0 +1,3 @@
+$rule_name,$case_count,$malicious,$not_malicious
+create_dump_process_dump,40,2,38
+currentcontrolset_autorun_keys_modification,12,9,3

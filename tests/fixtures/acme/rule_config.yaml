@@ -1,0 +1,13 @@
+r01_win_schtasks_create: {alerting: true, archived: false, enabled: true, id: ru_acme_01, run_frequency: LIVE}
+r02_lsass_access: {alerting: true, archived: false, enabled: true, id: ru_acme_02, run_frequency: LIVE}
+r03_portproxy: {alerting: true, archived: false, enabled: true, id: ru_acme_03, run_frequency: LIVE}
+r04_service_list: {alerting: true, archived: false, enabled: true, id: ru_acme_04, run_frequency: LIVE}
+r05_okta_push_spam: {alerting: true, archived: false, enabled: true, id: ru_acme_05, run_frequency: LIVE}
+r06_github_2fa_disabled: {alerting: true, archived: false, enabled: true, id: ru_acme_06, run_frequency: LIVE}
+r07_comment_and_negation: {alerting: true, archived: false, enabled: true, id: ru_acme_07, run_frequency: LIVE}
+r08_untagged: {alerting: true, archived: false, enabled: true, id: ru_acme_08, run_frequency: LIVE}
+r09_revoked_tag: {alerting: true, archived: false, enabled: true, id: ru_acme_09, run_frequency: LIVE}
+r10_never_fired: {alerting: true, archived: false, enabled: true, id: ru_acme_10, run_frequency: LIVE}
+r11_disabled: {alerting: true, archived: false, enabled: false, id: ru_acme_11, run_frequency: LIVE}
+r12_login_then_exec: {alerting: true, archived: false, enabled: true, id: ru_acme_12, run_frequency: LIVE}
+r13_o365_download: {alerting: true, archived: false, enabled: true, id: ru_acme_13, run_frequency: LIVE}

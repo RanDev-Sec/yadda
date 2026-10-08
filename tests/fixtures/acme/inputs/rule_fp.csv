@@ -1,0 +1,4 @@
+$rule_name,$case_count,$malicious,$not_malicious
+r01_win_schtasks_create,10,9,1
+r02_lsass_access,40,2,38
+r13_o365_download,6,1,5

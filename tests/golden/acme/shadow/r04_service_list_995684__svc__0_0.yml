@@ -1,0 +1,12 @@
+title: r04_service_list [$svc]
+logsource:
+  product: windows
+tags:
+- attack.t1543.003
+detection:
+  selection_eventid:
+    EventID:
+    - 7045
+  selection_none:
+    _no_scorable_field: x
+  condition: selection_none

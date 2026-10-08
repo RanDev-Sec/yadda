@@ -1,0 +1,20 @@
+// Telemetry inventory: what an environment sends, by log type, UDM event type and product event type
+// (Windows event ID, Sysmon ID, cloud API call...). Events data source: no field prefix, 90-day retention.
+// Last 7 days. "yadda run" executes it; or export the table as CSV -> environments\<name>\inputs\
+metadata.log_type != ""
+$log_type = metadata.log_type
+$event_type = metadata.event_type
+$product_event_type = metadata.product_event_type
+
+match:
+  $log_type, $event_type, $product_event_type
+
+outcome:
+  $event_count = count(metadata.id)
+  $host_count = count_distinct(principal.hostname)
+
+order:
+  $event_count desc
+
+limit:
+  10000

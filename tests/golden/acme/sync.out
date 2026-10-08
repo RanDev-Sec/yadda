@@ -1,0 +1,6 @@
+exit=0
+acmetest: 11 enabled rules mapped to techniques.yaml
+  1 rules use technique IDs MITRE has REPLACED - counted under the new ID; update the rule meta when convenient:
+   - T1562.001 -> T1685 Disable or Modify Tools (1 rules, e.g. r09_revoked_tag)
+  1 enabled rules have NO usable ATT&CK technique in meta (invisible in coverage):
+   - r08_untagged

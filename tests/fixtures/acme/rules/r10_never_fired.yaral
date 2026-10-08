@@ -1,0 +1,14 @@
+rule r10_never_fired {
+  meta:
+    author = "yadda test fixture"
+    description = "enabled, never fired"
+    mitre_attack_technique = "T1566.001"
+    severity = "Medium"
+
+  events:
+    $f.metadata.event_type = "FILE_CREATION"
+    re.regex($f.target.file.full_path, `\\Content\.Outlook\\.*\.(js|hta|vbs)$`) nocase
+
+  condition:
+    $f
+}

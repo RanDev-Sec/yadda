@@ -1,0 +1,22 @@
+rule r12_login_then_exec {
+  meta:
+    author = "yadda test fixture"
+    description = "multi-event join: remote login then process on the same host"
+    mitre_attack_technique = "T1078"
+    severity = "Medium"
+
+  events:
+    $login.metadata.event_type = "USER_LOGIN"
+    $login.extensions.auth.mechanism = "REMOTE_INTERACTIVE"
+    $login.target.hostname = $host
+    $proc.metadata.event_type = "PROCESS_LAUNCH"
+    $proc.principal.hostname = $host
+    re.regex($proc.target.process.file.full_path, `\\(whoami|net1?)\.exe$`) nocase
+    $login.metadata.event_timestamp.seconds < $proc.metadata.event_timestamp.seconds
+
+  match:
+    $host over 30m
+
+  condition:
+    $login and $proc
+}

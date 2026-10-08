@@ -1,0 +1,6 @@
+rule_name,log_type,detection_count
+create_dump_process_dump,WINDOWS_SYSMON,70
+create_dump_process_dump,CS_EDR,4
+suspicious_asn_watchlist,OFFICE_365,52
+suspicious_asn_watchlist,AZURE_AD,19
+okta_user_account_lockout,OKTA,8

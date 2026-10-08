@@ -1,0 +1,16 @@
+exit=0
+acmetest: coverage funnel (platforms: Identity Provider, Office Suite, SaaS, Windows)
+
+  ATT&CK techniques (all platforms)       697                          the Enterprise matrix, sub-techniques included
+  In scope for this environment          502   100.0% of scope        on the environment's platforms; every % below is of this number
+  Telemetry ceiling                      207    41.2% of scope        every input of a MITRE detection route is in the SIEM, or a rule exists; 273 more have some inputs, 192 of them one input short
+  With an enabled rule                    11     2.2% of scope        at least one enabled SIEM rule tagged with the technique
+  Working detection                        5     1.0% of scope        a rule fired recently and isn't noisy, or a test proved it (score 3+). A firing rule detects something; it doesn't show that every variant is caught
+  Depth-weighted working                 2.9     0.6% of scope        working techniques weighted by how much of them the rules cover (Atomic tests once 3+ variants are tested, else MITRE implementations, else data paths)
+  Validated                                0     0.0% of scope        proven by a test (score 4-5); 1 more has an Atomic variant that fired but no score 4 yet (record it with yadda score)
+
+  Working detection as % of the telemetry ceiling: 2.4%  (how much of what is detectable today is detected)
+  Working techniques with deep coverage (67%+): 2 of 5  (by: ART 1, MITRE implementations 3, data paths 1)
+  Robustness of working techniques (MITRE, best rule, 1-5): 3+: 0, 1-2: 3, not scorable: 2
+  ART variants: 50% of tested variants fired, across 1 techniques
+  Threats (2 in THREATS=): 4 of 99 techniques detected (4.0%), 6.1% weighted by group use, P1 3/15 - details: yadda priorities acmetest

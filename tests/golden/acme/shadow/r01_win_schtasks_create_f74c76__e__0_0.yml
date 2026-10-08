@@ -1,0 +1,14 @@
+title: r01_win_schtasks_create [$e]
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1053.005
+detection:
+  selection_1:
+    Image|re:
+    - \\schtasks\.exe$
+  selection_2:
+    CommandLine|re:
+    - \/create
+  condition: (selection_1 and selection_2)

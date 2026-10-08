@@ -1,0 +1,20 @@
+rule r04_service_list {
+  meta:
+    author = "yadda test fixture"
+    description = "service created whose name is on a reference list (placeholder filter, event 7045)"
+    mitre_attack_technique = "T1543.003"
+    severity = "Medium"
+
+  events:
+    $svc.metadata.event_type = "SERVICE_CREATION"
+    $svc.metadata.product_name = "Service Control Manager"
+    $svc.metadata.product_event_type = "7045"
+    $svc.target.application = $service_name
+    $service_name in %suspicious_service_names
+
+  match:
+    $service_name over 1h
+
+  condition:
+    $svc
+}

@@ -1,0 +1,5 @@
+technique,test_number,test_guid,test_name,art_platform,executor,result,rule,tested_on,notes
+T1053.005,1,00000000-fixt-0000-0000-000000000001,fixture test 1,windows,command_prompt,fired,r01_win_schtasks_create,2026-09-01,
+T1053.005,2,00000000-fixt-0000-0000-000000000002,fixture test 2,windows,powershell,fired,r01_win_schtasks_create,2026-09-01,
+T1053.005,3,00000000-fixt-0000-0000-000000000003,fixture test 3,windows,powershell,missed,,2026-09-01,
+T1053.005,4,00000000-fixt-0000-0000-000000000004,fixture test 4,windows,command_prompt,missed,,2026-09-01,

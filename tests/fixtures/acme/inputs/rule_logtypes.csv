@@ -1,0 +1,5 @@
+rule_name,log_type,detection_count
+r01_win_schtasks_create,WINDOWS_SYSMON,100
+r01_win_schtasks_create,WINEVTLOG,20
+r08_untagged,WINDOWS_SYSMON,12
+r13_o365_download,OFFICE_365,9

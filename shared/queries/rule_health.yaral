@@ -1,0 +1,18 @@
+// Rule health, for the evidence step of "yadda run". Rules data source.
+// Set the dashboard time range to the maximum (10+ years): rules charts only show rules created
+// inside the selected range, so a short range drops older rules.
+// Export the table as CSV -> environments\<name>\inputs\
+rules.live_status = "ENABLED"
+$rule_id = rules.name
+$display_name = rules.display_name
+$detection_time = rules.latest_detection_time.seconds
+$detection_count = rules.total_detection_count
+
+match:
+  $rule_id, $display_name, $detection_time, $detection_count
+
+outcome:
+  $rule_count = count(rules.name)
+
+limit:
+  10000

@@ -1,0 +1,16 @@
+rule r07_comment_and_negation {
+  meta:
+    author = "yadda test fixture"
+    description = "commented-out and negated event types must not count as scope"
+    mitre_attack_technique = "T1059.001"
+    severity = "Low"
+
+  events:
+    // $e.metadata.event_type = "FILE_CREATION"
+    not $e.metadata.event_type = "USER_LOGIN"
+    $e.metadata.event_type = /PROCESS_LAUNCH|PROCESS_OPEN/
+    re.regex($e.target.process.command_line, `-enc(odedcommand)? `) nocase
+
+  condition:
+    $e
+}

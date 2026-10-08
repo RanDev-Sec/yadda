@@ -1,0 +1,7 @@
+exit=0
+acmetest: 8 rules to review - high 4, medium 3, low 1  (0 already have a decision)
+  HIGH  r02_lsass_access: noisy: 95% of 40 closed cases not malicious
+  HIGH  r06_github_2fa_disabled: cannot fire: filters on log type GITHUB, not received; no evidence (not in rule health export)
+  HIGH  r09_revoked_tag: cannot fire: needs event type SERVICE_MODIFICATION, not received; outdated ATT&CK ID T1562.001 (MITRE replaced it)
+  HIGH  r13_o365_download: noisy: 83% of 6 closed cases not malicious
+worklist: <ROOT>/environments/acmetest/rule_review.csv  (fill in decision / notes / reviewed_on; they are kept on the next run)

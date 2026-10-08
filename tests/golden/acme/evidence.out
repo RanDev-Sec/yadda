@@ -1,0 +1,5 @@
+exit=0
+note: rule_fp.csv has no reason column, so it counts alerts, not cases. For case-based numbers, run shared/queries/rule_fp_rate.yaral in SecOps and export again.
+acmetest: 11 enabled tagged rules - healthy 5, noisy 2, never/not recently fired or missing 4  (window 90 days, noisy = >50% not malicious over >= 5 cases)
+techniques: set to 3: 5, set to 2: 2, set to 1: 0, unchanged: 4, left alone (set by hand or validated >= 4): 0
+  1 enabled rules not found in the health export (check the dashboard time range is set to the maximum), e.g. r06_github_2fa_disabled

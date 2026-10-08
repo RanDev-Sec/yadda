@@ -1,0 +1,20 @@
+.venv/
+tools/
+__pycache__/
+tests/_last_run/
+.pytest_cache/
+output/
+# Real environments never go into git: only the template and the fictional example are tracked.
+environments/*
+!environments/_template/
+!environments/example/
+environments/example/output/
+environments/example/cache/
+# Files yadda generates inside an environment folder
+environments/example/robustness/
+environments/example/robustness_*.csv
+environments/example/rule_ranking.csv
+environments/example/threat_*.csv
+environments/example/history.csv
+environments/example/data-sources.yaml
+environments/example/steps.json

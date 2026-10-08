@@ -1,0 +1,13 @@
+rule r08_untagged {
+  meta:
+    author = "yadda test fixture"
+    description = "no ATT&CK tag at all"
+    severity = "Low"
+
+  events:
+    $e.metadata.event_type = "NETWORK_DNS"
+    $e.network.dns.questions.name = "example.invalid"
+
+  condition:
+    $e
+}
